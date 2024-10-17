@@ -1,0 +1,22 @@
+12:52:30 **** Incremental Build of configuration Debug for project lecture4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:192:29: error: void value not ignored as it ought to be
+  192 |                         if (button1()){
+      |                             ^~~~~~~
+../Core/Src/main.c:193:37: error: 'temperature' undeclared (first use in this function)
+  193 |                           sct_value(temperature,0);
+      |                                     ^~~~~~~~~~~
+../Core/Src/main.c:193:37: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:197:29: error: void value not ignored as it ought to be
+  197 |                         if (button2()){
+      |                             ^~~~~~~
+../Core/Src/main.c:198:43: error: 'voltage' undeclared (first use in this function)
+  198 |                                 sct_value(voltage,0);
+      |                                           ^~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+12:52:32 Build Failed. 5 errors, 0 warnings. (took 1s.959ms)
+
