@@ -56,7 +56,8 @@ static volatile uint32_t raw_temp;
 static volatile uint32_t raw_volt;
 volatile uint32_t tick;
 static uint32_t off_time;
-
+enum state_t { SHOW_POT, SHOW_VOLT, SHOW_TEMP };
+static volatile enum state_t state = SHOW_POT;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -98,35 +99,24 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc){
 
 static void button1() {
 
-	static uint32_t last_button_tick;
-	  int32_t temperature = (raw_temp - (int32_t)(*TEMP30_CAL_ADDR));
-	  temperature = temperature * (int32_t)(110 - 30);
-	  temperature = temperature / (int32_t)(*TEMP110_CAL_ADDR - *TEMP30_CAL_ADDR);
-	  temperature = temperature + 30;
-
-
-	if(tick > last_button_tick + TIME){
-		last_button_tick = tick;
-		if(HAL_GPIO_ReadPin(S1_GPIO_Port, S1_Pin)){
-			off_time = tick +TIME;
-			sct_value(temperature,0);
-		}
-	}
+    static uint32_t last_button_tick;
+    if (tick > last_button_tick + TIME && HAL_GPIO_ReadPin(S1_GPIO_Port, S1_Pin)) {
+        last_button_tick = tick;
+        off_time = tick + TIME;  // offtime pri stisku tlacitka 1
+        return 1;  // Tlačítko stisknuto
+    }
+    return 0;
 }
 
 static void button2() {
 
 	static uint32_t last_button_tick;
-	uint32_t voltage = 330 * (*VREFINT_CAL_ADDR) / raw_volt;
-
-
-	if(tick > last_button_tick + TIME){
-		last_button_tick = tick;
-		if(HAL_GPIO_ReadPin(S2_GPIO_Port, S2_Pin)){
-			off_time = tick +TIME;
-			sct_value(voltage,0);
-		}
-	}
+	if (tick > last_button_tick + TIME && HAL_GPIO_ReadPin(S2_GPIO_Port, S2_Pin)) {
+	        last_button_tick = tick;
+	        off_time = tick + TIME;  // offtime pri stisku tlacitka 2
+	        return 1;  // Tlačítko stisknuto
+	    }
+	    return 0;
 }
 
 
@@ -175,7 +165,12 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
+	   if (button1()) {
+	       state = SHOW_TEMP;  // zmena stavu na teplotu
+	   }
+	   if (button2()) {
+	       state = SHOW_VOLT;  // zmena stavu na napeti
+	   }
 
 
 
@@ -186,21 +181,27 @@ int main(void)
 	  switch(state){
 	  	  case SHOW_POT:
 	  		 sct_value(raw_pot*500.9/4095, raw_pot*9/4095);
-
 	  		 break;
-	  	  case SHOW_VOLT:
-	  		if (button1()){
+	  	  case SHOW_VOLT:{
+	  		uint32_t voltage = 330 * (*VREFINT_CAL_ADDR) / raw_volt;
+	  		sct_value(voltage, 0);
+	  		  break;
+	  	  }
+	  	  case SHOW_TEMP:{
+	  		  int32_t temperature = (raw_temp - (int32_t)(*TEMP30_CAL_ADDR));
+	  		  temperature = temperature * (int32_t)(110 - 30);
+	  		  temperature = temperature / (int32_t)(*TEMP110_CAL_ADDR - *TEMP30_CAL_ADDR);
+	  		  temperature = temperature + 30;
 	  		  sct_value(temperature,0);
-	  		}
 	  		  break;
-	  	  case SHOW_TEMP:
-	  		if (button2()){
-	  			sct_value(voltage,0);
-	  		}
-	  		  break;
+	  	  }
 	  }
 
+	    if (tick > off_time) {
+	        state = SHOW_POT;
+	    }
 
+	    HAL_Delay(1000);
 
 	  //sct_value(raw_temp,0);
 	  //HAL_Delay(1000);
