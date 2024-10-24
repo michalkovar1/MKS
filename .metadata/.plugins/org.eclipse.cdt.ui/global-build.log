@@ -1,772 +1,439 @@
-10:45:17 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
-arm-none-eabi-gcc -o "lecture4.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lecture4.elf
- 
-arm-none-eabi-size  lecture4.elf 
-arm-none-eabi-objdump -h -S lecture4.elf  > "lecture4.list"
-   text	   data	    bss	    dec	    hex	filename
-  10560	     12	   1772	  12344	   3038	lecture4.elf
-Finished building: default.size.stdout
- 
-Finished building: lecture4.list
- 
-10:45:57 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-size  lecture4.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10560	     12	   1772	  12344	   3038	lecture4.elf
-Finished building: default.size.stdout
- 
-10:57:14 **** Incremental Build of configuration Debug for project lecture4 ****
+11:29:59 **** Incremental Build of configuration Debug for project lecture5 ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:111:21: error: 'row_pot' undeclared (first use in this function); did you mean 'raw_pot'?
-  111 |           sct_value(row_pot*501/4095, row_pot*0/10);
-      |                     ^~~~~~~
-      |                     raw_pot
-../Core/Src/main.c:111:21: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j4 all" terminated with exit code 2. Build might be incomplete.
-10:58:47 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:111:21: error: 'row_pot' undeclared (first use in this function); did you mean 'raw_pot'?
-  111 |           sct_value(row_pot*501/4096-1, row_pot*/4906-1);
-      |                     ^~~~~~~
-      |                     raw_pot
-../Core/Src/main.c:111:21: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/main.c:111:49: error: expected expression before '/' token
-  111 |           sct_value(row_pot*501/4096-1, row_pot*/4906-1);
-      |                                                 ^
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j4 all" terminated with exit code 2. Build might be incomplete.
-10:59:31 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:111:49: error: expected expression before '/' token
-  111 |           sct_value(raw_pot*501/4096-1, raw_pot*/4906-1);
-      |                                                 ^
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j4 all" terminated with exit code 2. Build might be incomplete.
-10:59:58 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:111:55: warning: conversion from 'long unsigned int' to 'uint8_t' {aka 'unsigned char'} changes value from '4294967295' to '255' [-Woverflow]
-  111 |           sct_value(raw_pot*501/4096-1, raw_pot*0/4906-1);
-      |                                         ~~~~~~~~~~~~~~^~
-arm-none-eabi-gcc -o "lecture4.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lecture4.elf
- 
-arm-none-eabi-size  lecture4.elf 
-arm-none-eabi-objdump -h -S lecture4.elf  > "lecture4.list"
-   text	   data	    bss	    dec	    hex	filename
-  10672	     12	   1772	  12456	   30a8	lecture4.elf
-Finished building: default.size.stdout
- 
-Finished building: lecture4.list
- 
-11:00:55 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "lecture4.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lecture4.elf
- 
-arm-none-eabi-size  lecture4.elf 
-arm-none-eabi-objdump -h -S lecture4.elf  > "lecture4.list"
-   text	   data	    bss	    dec	    hex	filename
-  10700	     12	   1772	  12484	   30c4	lecture4.elf
-Finished building: default.size.stdout
- 
-Finished building: lecture4.list
- 
-11:03:33 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "lecture4.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lecture4.elf
- 
-arm-none-eabi-size  lecture4.elf 
-arm-none-eabi-objdump -h -S lecture4.elf  > "lecture4.list"
-   text	   data	    bss	    dec	    hex	filename
-  16688	     12	   1772	  18472	   4828	lecture4.elf
-Finished building: default.size.stdout
- 
-Finished building: lecture4.list
- 
-11:17:48 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
-../Core/Src/main.c:69:32: error: 'ADC_Q' undeclared (first use in this function)
-   69 |           raw_pot = avg_pot >> ADC_Q;
-      |                                ^~~~~
-../Core/Src/main.c:69:32: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j4 all" terminated with exit code 2. Build might be incomplete.
-11:19:08 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
-../Core/Src/main.c:70:37: error: expected expression before ';' token
-   70 |           raw_pot = avg_pot >> ADC_Q;
-      |                                     ^
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j4 all" terminated with exit code 2. Build might be incomplete.
-11:20:00 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
-../Core/Src/main.c:70:32: error: 'ADC_Q' undeclared (first use in this function)
-   70 |           raw_pot = avg_pot >> ADC_Q;
-      |                                ^~~~~
-../Core/Src/main.c:70:32: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j4 all" terminated with exit code 2. Build might be incomplete.
-11:45:51 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
-arm-none-eabi-gcc "../Core/Src/stm32f0xx_hal_msp.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_hal_msp.d" -MT"Core/Src/stm32f0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_hal_msp.o"
-arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
-../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
-../Core/Src/main.c:86:19: error: 'row_volt' undeclared (first use in this function); did you mean 'raw_volt'?
-   86 |                   row_volt += HAL_ADC_GetValue(hadc);
-      |                   ^~~~~~~~
-      |                   raw_volt
-../Core/Src/main.c:86:19: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:145:11: warning: implicit declaration of function 'stc_value'; did you mean 'sct_value'? [-Wimplicit-function-declaration]
-  145 |           stc_value(raw_temp,0);
-      |           ^~~~~~~~~
-      |           sct_value
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-make: *** Waiting for unfinished jobs....
-"make -j4 all" terminated with exit code 2. Build might be incomplete.
-11:46:09 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:145:11: warning: implicit declaration of function 'stc_value'; did you mean 'sct_value'? [-Wimplicit-function-declaration]
-  145 |           stc_value(raw_temp,0);
-      |           ^~~~~~~~~
-      |           sct_value
-arm-none-eabi-gcc -o "lecture4.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-C:/appz/ST/STM32CubeIDE_1.10.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
-P:/MKS/lecture4/Debug/../Core/Src/main.c:145: undefined reference to `stc_value'
-C:/appz/ST/STM32CubeIDE_1.10.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: P:/MKS/lecture4/Debug/../Core/Src/main.c:147: undefined reference to `stc_value'
-collect2.exe: error: ld returned 1 exit status
-make: *** [makefile:64: lecture4.elf] Error 1
-"make -j4 all" terminated with exit code 2. Build might be incomplete.
-11:50:07 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
-arm-none-eabi-gcc -o "lecture4.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lecture4.elf
- 
-arm-none-eabi-size  lecture4.elf 
-arm-none-eabi-objdump -h -S lecture4.elf  > "lecture4.list"
-   text	   data	    bss	    dec	    hex	filename
-  16964	     12	   1788	  18764	   494c	lecture4.elf
-Finished building: default.size.stdout
- 
-Finished building: lecture4.list
- 
-11:53:24 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
-../Core/Src/main.c:85:49: error: expected ';' before '}' token
-   85 |                   temperature = temperature + 30
-      |                                                 ^
-      |                                                 ;
-   86 | 
-   87 |         }
-      |         ~                                        
-../Core/Src/main.c:92:28: warning: unused variable 'voltage' [-Wunused-variable]
-   92 |                   uint32_t voltage = 330 * (*VREFINT_CAL_ADDR) / raw_volt;
-      |                            ^~~~~~~
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j4 all" terminated with exit code 2. Build might be incomplete.
-11:53:38 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
-../Core/Src/main.c:92:28: warning: unused variable 'voltage' [-Wunused-variable]
-   92 |                   uint32_t voltage = 330 * (*VREFINT_CAL_ADDR) / raw_volt;
-      |                            ^~~~~~~
-arm-none-eabi-gcc -o "lecture4.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lecture4.elf
- 
-arm-none-eabi-size  lecture4.elf 
-arm-none-eabi-objdump -h -S lecture4.elf  > "lecture4.list"
-   text	   data	    bss	    dec	    hex	filename
-  17536	     12	   1788	  19336	   4b88	lecture4.elf
-Finished building: default.size.stdout
- 
-Finished building: lecture4.list
- 
-11:56:13 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
-../Core/Src/main.c:86:29: error: 'temperatur' undeclared (first use in this function); did you mean 'temperature'?
-   86 |                   sct_value(temperatur,0);
-      |                             ^~~~~~~~~~
-      |                             temperature
-../Core/Src/main.c:86:29: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/main.c:87:34: error: expected ';' before '}' token
-   87 |                   HAL_Delay(1000)
-      |                                  ^
-      |                                  ;
-   88 | 
-   89 |         }
-      |         ~                         
-../Core/Src/main.c:96:34: error: expected ';' before '}' token
-   96 |                   HAL_Delay(1000)
-      |                                  ^
-      |                                  ;
-   97 |         }
-      |         ~                         
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j4 all" terminated with exit code 2. Build might be incomplete.
-11:56:31 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "lecture4.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lecture4.elf
- 
-arm-none-eabi-size  lecture4.elf 
-arm-none-eabi-objdump -h -S lecture4.elf  > "lecture4.list"
-   text	   data	    bss	    dec	    hex	filename
-  17580	     12	   1788	  19380	   4bb4	lecture4.elf
-Finished building: default.size.stdout
- 
-Finished building: lecture4.list
- 
-11:59:34 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
-../Core/Src/main.c:106:5: warning: 'main' is normally a non-static function [-Wmain]
-  106 | int main(void)
-      |     ^~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:135:31: warning: passing argument 1 of 'HAL_ADCEx_Calibration_Start' from incompatible pointer type [-Wincompatible-pointer-types]
-  135 |   HAL_ADCEx_Calibration_Start(&hadc);
-      |                               ^~~~~
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:76:17: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+   76 |         token = strtok(data, " ");
+      |                 ^~~~~~
+../Core/Src/main.c:76:15: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   76 |         token = strtok(data, " ");
+      |               ^
+../Core/Src/main.c:77:13: warning: implicit declaration of function 'strcasecmp' [-Wimplicit-function-declaration]
+   77 |         if (strcasecmp(token, "HELLO") == 0) {
+      |             ^~~~~~~~~~
+../Core/Src/main.c:81:23: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   81 |                 token = strtok(NULL, " ");
+      |                       ^
+../Core/Src/main.c:93:23: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   93 |                 token = strtok(NULL, " ");
+      |                       ^
+../Core/Src/main.c:106:17: error: 'led1_state' undeclared (first use in this function)
+  106 |                 led1_state= HAL_GPIO_ReadPin(LED1_GPIO_Port, LED1_Pin);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:106:17: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:108:31: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+  108 |                 printf("LED1 %s\n");
+      |                              ~^
       |                               |
-      |                               ADC_HandleTypeDef ** {aka struct __ADC_HandleTypeDef **}
-In file included from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h:912,
-                 from ../Core/Inc/stm32f0xx_hal_conf.h:213,
-                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc_ex.h:271:72: note: expected 'ADC_HandleTypeDef *' {aka 'struct __ADC_HandleTypeDef *'} but argument is of type 'ADC_HandleTypeDef **' {aka 'struct __ADC_HandleTypeDef **'}
-  271 | HAL_StatusTypeDef       HAL_ADCEx_Calibration_Start(ADC_HandleTypeDef* hadc);
-      |                                                     ~~~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:136:20: warning: passing argument 1 of 'HAL_ADC_Start_IT' from incompatible pointer type [-Wincompatible-pointer-types]
-  136 |   HAL_ADC_Start_IT(&hadc);
-      |                    ^~~~~
-      |                    |
-      |                    ADC_HandleTypeDef ** {aka struct __ADC_HandleTypeDef **}
-../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h:954:61: note: expected 'ADC_HandleTypeDef *' {aka 'struct __ADC_HandleTypeDef *'} but argument is of type 'ADC_HandleTypeDef **' {aka 'struct __ADC_HandleTypeDef **'}
-  954 | HAL_StatusTypeDef       HAL_ADC_Start_IT(ADC_HandleTypeDef* hadc);
-      |                                          ~~~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
-../Core/Src/main.c:215:13: error: invalid storage class for function 'MX_ADC_Init'
-  215 | static void MX_ADC_Init(void)
-      |             ^~~~~~~~~~~
-../Core/Src/main.c: In function 'MX_ADC_Init':
-../Core/Src/main.c:230:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  230 |   hadc.Instance = ADC1;
-      |       ^
-      |       ->
-../Core/Src/main.c:231:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  231 |   hadc.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
-      |       ^
-      |       ->
-../Core/Src/main.c:232:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  232 |   hadc.Init.Resolution = ADC_RESOLUTION_12B;
-      |       ^
-      |       ->
-../Core/Src/main.c:233:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  233 |   hadc.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-      |       ^
-      |       ->
-../Core/Src/main.c:234:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  234 |   hadc.Init.ScanConvMode = ADC_SCAN_DIRECTION_FORWARD;
-      |       ^
-      |       ->
-../Core/Src/main.c:235:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  235 |   hadc.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
-      |       ^
-      |       ->
-../Core/Src/main.c:236:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  236 |   hadc.Init.LowPowerAutoWait = DISABLE;
-      |       ^
-      |       ->
-../Core/Src/main.c:237:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  237 |   hadc.Init.LowPowerAutoPowerOff = DISABLE;
-      |       ^
-      |       ->
-../Core/Src/main.c:238:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  238 |   hadc.Init.ContinuousConvMode = ENABLE;
-      |       ^
-      |       ->
-../Core/Src/main.c:239:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  239 |   hadc.Init.DiscontinuousConvMode = DISABLE;
-      |       ^
-      |       ->
-../Core/Src/main.c:240:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  240 |   hadc.Init.ExternalTrigConv = ADC_SOFTWARE_START;
-      |       ^
-      |       ->
-../Core/Src/main.c:241:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  241 |   hadc.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-      |       ^
-      |       ->
-../Core/Src/main.c:242:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  242 |   hadc.Init.DMAContinuousRequests = DISABLE;
-      |       ^
-      |       ->
-../Core/Src/main.c:243:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  243 |   hadc.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
-      |       ^
-      |       ->
-../Core/Src/main.c:244:20: warning: passing argument 1 of 'HAL_ADC_Init' from incompatible pointer type [-Wincompatible-pointer-types]
-  244 |   if (HAL_ADC_Init(&hadc) != HAL_OK)
-      |                    ^~~~~
-      |                    |
-      |                    ADC_HandleTypeDef ** {aka struct __ADC_HandleTypeDef **}
-../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h:925:51: note: expected 'ADC_HandleTypeDef *' {aka 'struct __ADC_HandleTypeDef *'} but argument is of type 'ADC_HandleTypeDef **' {aka 'struct __ADC_HandleTypeDef **'}
-  925 | HAL_StatusTypeDef HAL_ADC_Init(ADC_HandleTypeDef* hadc);
-      |                                ~~~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:254:29: warning: passing argument 1 of 'HAL_ADC_ConfigChannel' from incompatible pointer type [-Wincompatible-pointer-types]
-  254 |   if (HAL_ADC_ConfigChannel(&hadc, &sConfig) != HAL_OK)
-      |                             ^~~~~
-      |                             |
-      |                             ADC_HandleTypeDef ** {aka struct __ADC_HandleTypeDef **}
-../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h:979:66: note: expected 'ADC_HandleTypeDef *' {aka 'struct __ADC_HandleTypeDef *'} but argument is of type 'ADC_HandleTypeDef **' {aka 'struct __ADC_HandleTypeDef **'}
-  979 | HAL_StatusTypeDef       HAL_ADC_ConfigChannel(ADC_HandleTypeDef* hadc, ADC_ChannelConfTypeDef* sConfig);
-      |                                               ~~~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:262:29: warning: passing argument 1 of 'HAL_ADC_ConfigChannel' from incompatible pointer type [-Wincompatible-pointer-types]
-  262 |   if (HAL_ADC_ConfigChannel(&hadc, &sConfig) != HAL_OK)
-      |                             ^~~~~
-      |                             |
-      |                             ADC_HandleTypeDef ** {aka struct __ADC_HandleTypeDef **}
-../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h:979:66: note: expected 'ADC_HandleTypeDef *' {aka 'struct __ADC_HandleTypeDef *'} but argument is of type 'ADC_HandleTypeDef **' {aka 'struct __ADC_HandleTypeDef **'}
-  979 | HAL_StatusTypeDef       HAL_ADC_ConfigChannel(ADC_HandleTypeDef* hadc, ADC_ChannelConfTypeDef* sConfig);
-      |                                               ~~~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:270:29: warning: passing argument 1 of 'HAL_ADC_ConfigChannel' from incompatible pointer type [-Wincompatible-pointer-types]
-  270 |   if (HAL_ADC_ConfigChannel(&hadc, &sConfig) != HAL_OK)
-      |                             ^~~~~
-      |                             |
-      |                             ADC_HandleTypeDef ** {aka struct __ADC_HandleTypeDef **}
-../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h:979:66: note: expected 'ADC_HandleTypeDef *' {aka 'struct __ADC_HandleTypeDef *'} but argument is of type 'ADC_HandleTypeDef **' {aka 'struct __ADC_HandleTypeDef **'}
-  979 | HAL_StatusTypeDef       HAL_ADC_ConfigChannel(ADC_HandleTypeDef* hadc, ADC_ChannelConfTypeDef* sConfig);
-      |                                               ~~~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
-../Core/Src/main.c:285:13: error: invalid storage class for function 'MX_USART2_UART_Init'
-  285 | static void MX_USART2_UART_Init(void)
-      |             ^~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:320:13: error: invalid storage class for function 'MX_GPIO_Init'
-  320 | static void MX_GPIO_Init(void)
-      |             ^~~~~~~~~~~~
-../Core/Src/main.c:385:1: error: expected declaration or statement at end of input
-  385 | }
-      | ^
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:61:13: warning: 'MX_GPIO_Init' used but never defined
-   61 | static void MX_GPIO_Init(void);
-      |             ^~~~~~~~~~~~
-../Core/Src/main.c:62:13: warning: 'MX_USART2_UART_Init' used but never defined
-   62 | static void MX_USART2_UART_Init(void);
-      |             ^~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:63:13: warning: 'MX_ADC_Init' used but never defined
-   63 | static void MX_ADC_Init(void);
-      |             ^~~~~~~~~~~
-../Core/Src/main.c:376:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
-  376 | void Error_Handler(void)
-      |      ^~~~~~~~~~~~~
-../Core/Src/main.c:320:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
-  320 | static void MX_GPIO_Init(void)
-      |             ^~~~~~~~~~~~
-../Core/Src/main.c:285:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
-  285 | static void MX_USART2_UART_Init(void)
-      |             ^~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:215:13: warning: 'MX_ADC_Init' defined but not used [-Wunused-function]
-  215 | static void MX_ADC_Init(void)
-      |             ^~~~~~~~~~~
-../Core/Src/main.c:174:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
-  174 | void SystemClock_Config(void)
-      |      ^~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:106:5: warning: 'main' defined but not used [-Wunused-function]
-  106 | int main(void)
-      |     ^~~~
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j4 all" terminated with exit code 2. Build might be incomplete.
-12:00:18 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
-../Core/Src/main.c:106:5: warning: 'main' is normally a non-static function [-Wmain]
-  106 | int main(void)
-      |     ^~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:135:31: warning: passing argument 1 of 'HAL_ADCEx_Calibration_Start' from incompatible pointer type [-Wincompatible-pointer-types]
-  135 |   HAL_ADCEx_Calibration_Start(&hadc);
-      |                               ^~~~~
+      |                               char *
+../Core/Src/main.c:109:31: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+  109 |                 printf("LED2 %s\n");
+      |                              ~^
       |                               |
-      |                               ADC_HandleTypeDef ** {aka struct __ADC_HandleTypeDef **}
-In file included from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h:912,
-                 from ../Core/Inc/stm32f0xx_hal_conf.h:213,
-                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc_ex.h:271:72: note: expected 'ADC_HandleTypeDef *' {aka 'struct __ADC_HandleTypeDef *'} but argument is of type 'ADC_HandleTypeDef **' {aka 'struct __ADC_HandleTypeDef **'}
-  271 | HAL_StatusTypeDef       HAL_ADCEx_Calibration_Start(ADC_HandleTypeDef* hadc);
-      |                                                     ~~~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:136:20: warning: passing argument 1 of 'HAL_ADC_Start_IT' from incompatible pointer type [-Wincompatible-pointer-types]
-  136 |   HAL_ADC_Start_IT(&hadc);
-      |                    ^~~~~
-      |                    |
-      |                    ADC_HandleTypeDef ** {aka struct __ADC_HandleTypeDef **}
-../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h:954:61: note: expected 'ADC_HandleTypeDef *' {aka 'struct __ADC_HandleTypeDef *'} but argument is of type 'ADC_HandleTypeDef **' {aka 'struct __ADC_HandleTypeDef **'}
-  954 | HAL_StatusTypeDef       HAL_ADC_Start_IT(ADC_HandleTypeDef* hadc);
-      |                                          ~~~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
-../Core/Src/main.c:215:13: error: invalid storage class for function 'MX_ADC_Init'
-  215 | static void MX_ADC_Init(void)
-      |             ^~~~~~~~~~~
-../Core/Src/main.c: In function 'MX_ADC_Init':
-../Core/Src/main.c:230:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  230 |   hadc.Instance = ADC1;
-      |       ^
-      |       ->
-../Core/Src/main.c:231:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  231 |   hadc.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
-      |       ^
-      |       ->
-../Core/Src/main.c:232:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  232 |   hadc.Init.Resolution = ADC_RESOLUTION_12B;
-      |       ^
-      |       ->
-../Core/Src/main.c:233:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  233 |   hadc.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-      |       ^
-      |       ->
-../Core/Src/main.c:234:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  234 |   hadc.Init.ScanConvMode = ADC_SCAN_DIRECTION_FORWARD;
-      |       ^
-      |       ->
-../Core/Src/main.c:235:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  235 |   hadc.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
-      |       ^
-      |       ->
-../Core/Src/main.c:236:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  236 |   hadc.Init.LowPowerAutoWait = DISABLE;
-      |       ^
-      |       ->
-../Core/Src/main.c:237:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  237 |   hadc.Init.LowPowerAutoPowerOff = DISABLE;
-      |       ^
-      |       ->
-../Core/Src/main.c:238:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  238 |   hadc.Init.ContinuousConvMode = ENABLE;
-      |       ^
-      |       ->
-../Core/Src/main.c:239:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  239 |   hadc.Init.DiscontinuousConvMode = DISABLE;
-      |       ^
-      |       ->
-../Core/Src/main.c:240:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  240 |   hadc.Init.ExternalTrigConv = ADC_SOFTWARE_START;
-      |       ^
-      |       ->
-../Core/Src/main.c:241:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  241 |   hadc.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-      |       ^
-      |       ->
-../Core/Src/main.c:242:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  242 |   hadc.Init.DMAContinuousRequests = DISABLE;
-      |       ^
-      |       ->
-../Core/Src/main.c:243:7: error: 'hadc' is a pointer; did you mean to use '->'?
-  243 |   hadc.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
-      |       ^
-      |       ->
-../Core/Src/main.c:244:20: warning: passing argument 1 of 'HAL_ADC_Init' from incompatible pointer type [-Wincompatible-pointer-types]
-  244 |   if (HAL_ADC_Init(&hadc) != HAL_OK)
-      |                    ^~~~~
-      |                    |
-      |                    ADC_HandleTypeDef ** {aka struct __ADC_HandleTypeDef **}
-../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h:925:51: note: expected 'ADC_HandleTypeDef *' {aka 'struct __ADC_HandleTypeDef *'} but argument is of type 'ADC_HandleTypeDef **' {aka 'struct __ADC_HandleTypeDef **'}
-  925 | HAL_StatusTypeDef HAL_ADC_Init(ADC_HandleTypeDef* hadc);
-      |                                ~~~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:254:29: warning: passing argument 1 of 'HAL_ADC_ConfigChannel' from incompatible pointer type [-Wincompatible-pointer-types]
-  254 |   if (HAL_ADC_ConfigChannel(&hadc, &sConfig) != HAL_OK)
-      |                             ^~~~~
-      |                             |
-      |                             ADC_HandleTypeDef ** {aka struct __ADC_HandleTypeDef **}
-../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h:979:66: note: expected 'ADC_HandleTypeDef *' {aka 'struct __ADC_HandleTypeDef *'} but argument is of type 'ADC_HandleTypeDef **' {aka 'struct __ADC_HandleTypeDef **'}
-  979 | HAL_StatusTypeDef       HAL_ADC_ConfigChannel(ADC_HandleTypeDef* hadc, ADC_ChannelConfTypeDef* sConfig);
-      |                                               ~~~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:262:29: warning: passing argument 1 of 'HAL_ADC_ConfigChannel' from incompatible pointer type [-Wincompatible-pointer-types]
-  262 |   if (HAL_ADC_ConfigChannel(&hadc, &sConfig) != HAL_OK)
-      |                             ^~~~~
-      |                             |
-      |                             ADC_HandleTypeDef ** {aka struct __ADC_HandleTypeDef **}
-../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h:979:66: note: expected 'ADC_HandleTypeDef *' {aka 'struct __ADC_HandleTypeDef *'} but argument is of type 'ADC_HandleTypeDef **' {aka 'struct __ADC_HandleTypeDef **'}
-  979 | HAL_StatusTypeDef       HAL_ADC_ConfigChannel(ADC_HandleTypeDef* hadc, ADC_ChannelConfTypeDef* sConfig);
-      |                                               ~~~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:270:29: warning: passing argument 1 of 'HAL_ADC_ConfigChannel' from incompatible pointer type [-Wincompatible-pointer-types]
-  270 |   if (HAL_ADC_ConfigChannel(&hadc, &sConfig) != HAL_OK)
-      |                             ^~~~~
-      |                             |
-      |                             ADC_HandleTypeDef ** {aka struct __ADC_HandleTypeDef **}
-../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h:979:66: note: expected 'ADC_HandleTypeDef *' {aka 'struct __ADC_HandleTypeDef *'} but argument is of type 'ADC_HandleTypeDef **' {aka 'struct __ADC_HandleTypeDef **'}
-  979 | HAL_StatusTypeDef       HAL_ADC_ConfigChannel(ADC_HandleTypeDef* hadc, ADC_ChannelConfTypeDef* sConfig);
-      |                                               ~~~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
-../Core/Src/main.c:285:13: error: invalid storage class for function 'MX_USART2_UART_Init'
-  285 | static void MX_USART2_UART_Init(void)
-      |             ^~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:320:13: error: invalid storage class for function 'MX_GPIO_Init'
-  320 | static void MX_GPIO_Init(void)
-      |             ^~~~~~~~~~~~
-../Core/Src/main.c:385:1: error: expected declaration or statement at end of input
-  385 | }
-      | ^
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:61:13: warning: 'MX_GPIO_Init' used but never defined
-   61 | static void MX_GPIO_Init(void);
-      |             ^~~~~~~~~~~~
-../Core/Src/main.c:62:13: warning: 'MX_USART2_UART_Init' used but never defined
-   62 | static void MX_USART2_UART_Init(void);
-      |             ^~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:63:13: warning: 'MX_ADC_Init' used but never defined
-   63 | static void MX_ADC_Init(void);
-      |             ^~~~~~~~~~~
-../Core/Src/main.c:376:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
-  376 | void Error_Handler(void)
-      |      ^~~~~~~~~~~~~
-../Core/Src/main.c:320:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
-  320 | static void MX_GPIO_Init(void)
-      |             ^~~~~~~~~~~~
-../Core/Src/main.c:285:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
-  285 | static void MX_USART2_UART_Init(void)
-      |             ^~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:215:13: warning: 'MX_ADC_Init' defined but not used [-Wunused-function]
-  215 | static void MX_ADC_Init(void)
-      |             ^~~~~~~~~~~
-../Core/Src/main.c:174:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
-  174 | void SystemClock_Config(void)
-      |      ^~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:106:5: warning: 'main' defined but not used [-Wunused-function]
-  106 | int main(void)
-      |     ^~~~
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+      |                               char *
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
 "make -j4 all" terminated with exit code 2. Build might be incomplete.
-12:01:06 **** Incremental Build of configuration Debug for project lecture4 ****
+11:31:14 **** Incremental Build of configuration Debug for project lecture5 ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "lecture4.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lecture4.elf
- 
-arm-none-eabi-size  lecture4.elf 
-arm-none-eabi-objdump -h -S lecture4.elf  > "lecture4.list"
-   text	   data	    bss	    dec	    hex	filename
-  17580	     12	   1788	  19380	   4bb4	lecture4.elf
-Finished building: default.size.stdout
- 
-Finished building: lecture4.list
- 
-12:02:03 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "lecture4.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lecture4.elf
- 
-arm-none-eabi-size  lecture4.elf 
-arm-none-eabi-objdump -h -S lecture4.elf  > "lecture4.list"
-   text	   data	    bss	    dec	    hex	filename
-  17532	     12	   1788	  19332	   4b84	lecture4.elf
-Finished building: default.size.stdout
- 
-Finished building: lecture4.list
- 
-12:31:53 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'button1':
-../Core/Src/main.c:104:12: error: 'tick' undeclared (first use in this function); did you mean 'uwTick'?
-  104 |         if(tick > last_button_tick + TIME){
-      |            ^~~~
-      |            uwTick
-../Core/Src/main.c:104:12: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/main.c:105:17: error: 'last_botton_tick' undeclared (first use in this function); did you mean 'last_button_tick'?
-  105 |                 last_botton_tick = tick;
-      |                 ^~~~~~~~~~~~~~~~
-      |                 last_button_tick
-../Core/Src/main.c:107:25: error: 'off_time' undeclared (first use in this function)
-  107 |                         off_time = tick +TIME;
-      |                         ^~~~~~~~
-../Core/Src/main.c: In function 'button2':
-../Core/Src/main.c:119:12: error: 'tick' undeclared (first use in this function); did you mean 'uwTick'?
-  119 |         if(tick > last_button_tick + TIME){
-      |            ^~~~
-      |            uwTick
-../Core/Src/main.c:120:17: error: 'last_botton_tick' undeclared (first use in this function); did you mean 'last_button_tick'?
-  120 |                 last_botton_tick = tick;
-      |                 ^~~~~~~~~~~~~~~~
-      |                 last_button_tick
-../Core/Src/main.c:122:25: error: 'off_time' undeclared (first use in this function)
-  122 |                         off_time = tick +TIME;
-      |                         ^~~~~~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:176:58: warning: unused variable 'state' [-Wunused-variable]
-  176 |           static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
-      |                                                          ^~~~~
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:113:13: warning: 'button2' defined but not used [-Wunused-function]
-  113 | static void button2() {
-      |             ^~~~~~~
-../Core/Src/main.c:95:13: warning: 'button1' defined but not used [-Wunused-function]
-   95 | static void button1() {
-      |             ^~~~~~~
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j4 all" terminated with exit code 2. Build might be incomplete.
-12:32:58 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'button1':
-../Core/Src/main.c:107:17: error: 'last_botton_tick' undeclared (first use in this function); did you mean 'last_button_tick'?
-  107 |                 last_botton_tick = tick;
-      |                 ^~~~~~~~~~~~~~~~
-      |                 last_button_tick
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:107:17: error: 'led1_state' undeclared (first use in this function)
+  107 |                 led1_state= HAL_GPIO_ReadPin(LED1_GPIO_Port, LED1_Pin);
+      |                 ^~~~~~~~~~
 ../Core/Src/main.c:107:17: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/main.c: In function 'button2':
-../Core/Src/main.c:122:17: error: 'last_botton_tick' undeclared (first use in this function); did you mean 'last_button_tick'?
-  122 |                 last_botton_tick = tick;
-      |                 ^~~~~~~~~~~~~~~~
-      |                 last_button_tick
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:178:58: warning: unused variable 'state' [-Wunused-variable]
-  178 |           static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
-      |                                                          ^~~~~
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:115:13: warning: 'button2' defined but not used [-Wunused-function]
-  115 | static void button2() {
-      |             ^~~~~~~
-../Core/Src/main.c:97:13: warning: 'button1' defined but not used [-Wunused-function]
-   97 | static void button1() {
-      |             ^~~~~~~
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+../Core/Src/main.c:108:17: error: 'led2_state' undeclared (first use in this function)
+  108 |                 led2_state= HAL_GPIO_ReadPin(LED2_GPIO_Port, LED2_Pin);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:109:31: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+  109 |                 printf("LED1 %s\n");
+      |                              ~^
+      |                               |
+      |                               char *
+../Core/Src/main.c:110:31: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+  110 |                 printf("LED2 %s\n");
+      |                              ~^
+      |                               |
+      |                               char *
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
 "make -j4 all" terminated with exit code 2. Build might be incomplete.
-12:34:05 **** Incremental Build of configuration Debug for project lecture4 ****
+11:36:57 **** Incremental Build of configuration Debug for project lecture5 ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'button2':
-../Core/Src/main.c:122:17: error: 'last_botton_tick' undeclared (first use in this function); did you mean 'last_button_tick'?
-  122 |                 last_botton_tick = tick;
-      |                 ^~~~~~~~~~~~~~~~
-      |                 last_button_tick
-../Core/Src/main.c:122:17: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:178:58: warning: unused variable 'state' [-Wunused-variable]
-  178 |           static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
-      |                                                          ^~~~~
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:115:13: warning: 'button2' defined but not used [-Wunused-function]
-  115 | static void button2() {
-      |             ^~~~~~~
-../Core/Src/main.c:97:13: warning: 'button1' defined but not used [-Wunused-function]
-   97 | static void button1() {
-      |             ^~~~~~~
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j4 all" terminated with exit code 2. Build might be incomplete.
-12:34:25 **** Incremental Build of configuration Debug for project lecture4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:178:58: warning: unused variable 'state' [-Wunused-variable]
-  178 |           static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
-      |                                                          ^~~~~
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:115:13: warning: 'button2' defined but not used [-Wunused-function]
-  115 | static void button2() {
-      |             ^~~~~~~
-../Core/Src/main.c:97:13: warning: 'button1' defined but not used [-Wunused-function]
-   97 | static void button1() {
-      |             ^~~~~~~
-arm-none-eabi-gcc -o "lecture4.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lecture4.elf
+arm-none-eabi-gcc -o "lecture5.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture5.elf
  
-arm-none-eabi-size  lecture4.elf 
-arm-none-eabi-objdump -h -S lecture4.elf  > "lecture4.list"
+arm-none-eabi-size  lecture5.elf 
+arm-none-eabi-objdump -h -S lecture5.elf  > "lecture5.list"
    text	   data	    bss	    dec	    hex	filename
-  16824	     12	   1788	  18624	   48c0	lecture4.elf
+  15860	    104	   2240	  18204	   471c	lecture5.elf
 Finished building: default.size.stdout
  
-Finished building: lecture4.list
+Finished building: lecture5.list
  
-12:50:46 **** Incremental Build of configuration Debug for project lecture4 ****
+12:02:39 **** Incremental Build of configuration Debug for project lecture5 ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_hal_msp.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_hal_msp.d" -MT"Core/Src/stm32f0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_hal_msp.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:192:29: warning: implicit declaration of function 'buton1'; did you mean 'button1'? [-Wimplicit-function-declaration]
-  192 |                         if (buton1()){
-      |                             ^~~~~~
-      |                             button1
-../Core/Src/main.c:193:27: error: too few arguments to function 'sct_value'
-  193 |                           sct_value(raw_volt);
-      |                           ^~~~~~~~~
-In file included from ../Core/Src/main.c:24:
-../Core/Inc/sct.h:17:6: note: declared here
-   17 | void sct_value(uint16_t value, uint8_t led);
-      |      ^~~~~~~~~
-../Core/Src/main.c:197:29: warning: implicit declaration of function 'buton2'; did you mean 'button2'? [-Wimplicit-function-declaration]
-  197 |                         if (buton2()){
-      |                             ^~~~~~
-      |                             button2
-../Core/Src/main.c:198:25: error: too few arguments to function 'sct_value'
-  198 |                         sct_value(raw_temp);
-      |                         ^~~~~~~~~
-../Core/Inc/sct.h:17:6: note: declared here
-   17 | void sct_value(uint16_t value, uint8_t led);
-      |      ^~~~~~~~~
+../Core/Src/main.c:264:13: error: invalid storage class for function 'MX_I2C1_Init'
+  264 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:312:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  312 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:345:13: error: invalid storage class for function 'MX_DMA_Init'
+  345 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:363:13: error: invalid storage class for function 'MX_GPIO_Init'
+  363 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:422:1: error: expected declaration or statement at end of input
+  422 | }
+      | ^
 ../Core/Src/main.c: At top level:
-../Core/Src/main.c:117:13: warning: 'button2' defined but not used [-Wunused-function]
-  117 | static void button2() {
-      |             ^~~~~~~
-../Core/Src/main.c:99:13: warning: 'button1' defined but not used [-Wunused-function]
-   99 | static void button1() {
-      |             ^~~~~~~
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+../Core/Src/main.c:60:13: warning: 'MX_GPIO_Init' used but never defined
+   60 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:61:13: warning: 'MX_DMA_Init' used but never defined
+   61 | static void MX_DMA_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:62:13: warning: 'MX_USART2_UART_Init' used but never defined
+   62 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:63:13: warning: 'MX_I2C1_Init' used but never defined
+   63 | static void MX_I2C1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:413:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  413 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:363:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  363 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:345:13: warning: 'MX_DMA_Init' defined but not used [-Wunused-function]
+  345 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:312:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  312 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:264:13: warning: 'MX_I2C1_Init' defined but not used [-Wunused-function]
+  264 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:218:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  218 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
 "make -j4 all" terminated with exit code 2. Build might be incomplete.
-12:52:30 **** Incremental Build of configuration Debug for project lecture4 ****
+12:03:15 **** Incremental Build of configuration Debug for project lecture5 ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:192:29: error: void value not ignored as it ought to be
-  192 |                         if (button1()){
-      |                             ^~~~~~~
-../Core/Src/main.c:193:37: error: 'temperature' undeclared (first use in this function)
-  193 |                           sct_value(temperature,0);
-      |                                     ^~~~~~~~~~~
-../Core/Src/main.c:193:37: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/main.c:197:29: error: void value not ignored as it ought to be
-  197 |                         if (button2()){
-      |                             ^~~~~~~
-../Core/Src/main.c:198:43: error: 'voltage' undeclared (first use in this function)
-  198 |                                 sct_value(voltage,0);
-      |                                           ^~~~~~~
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+arm-none-eabi-gcc -o "lecture5.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture5.elf
+ 
+arm-none-eabi-size  lecture5.elf 
+arm-none-eabi-objdump -h -S lecture5.elf  > "lecture5.list"
+   text	   data	    bss	    dec	    hex	filename
+  19676	    104	   2328	  22108	   565c	lecture5.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture5.list
+ 
+12:28:33 **** Incremental Build of configuration Debug for project lecture5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:137:34: warning: unused variable 'addr' [-Wunused-variable]
+  137 |                         uint16_t addr = atoi(token);
+      |                                  ^~~~
+../Core/Src/main.c:142:72: error: 'addr' undeclared (first use in this function)
+  142 |                                 HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, &value, 1, 1000);
+      |                                                                        ^~~~
+../Core/Src/main.c:142:72: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:150:17: error: expected '}' before 'else'
+  150 |                 else{
+      |                 ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:155:9: error: expected identifier or '(' before 'else'
+  155 |         else if(strcasecmp(token, "DUMP") == 0){
+      |         ^~~~
+../Core/Src/main.c:170:34: error: expected declaration specifiers or '...' before '&' token
+  170 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, &value, 1, 1000);
+      |                                  ^
+../Core/Src/main.c:39:21: error: expected declaration specifiers or '...' before numeric constant
+   39 | #define EEPROM_ADDR 0x40
+      |                     ^~~~
+../Core/Src/main.c:170:42: note: in expansion of macro 'EEPROM_ADDR'
+  170 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, &value, 1, 1000);
+      |                                          ^~~~~~~~~~~
+../Core/Src/main.c:170:55: error: unknown type name 'addr'
+  170 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, &value, 1, 1000);
+      |                                                       ^~~~
+In file included from ../Core/Inc/stm32f0xx_hal_conf.h:241,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:372:41: error: expected declaration specifiers or '...' before '(' token
+  372 | #define I2C_MEMADD_SIZE_16BIT           (0x00000002U)
+      |                                         ^
+../Core/Src/main.c:170:61: note: in expansion of macro 'I2C_MEMADD_SIZE_16BIT'
+  170 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, &value, 1, 1000);
+      |                                                             ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:170:84: error: expected declaration specifiers or '...' before '&' token
+  170 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, &value, 1, 1000);
+      |                                                                                    ^
+../Core/Src/main.c:170:92: error: expected declaration specifiers or '...' before numeric constant
+  170 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, &value, 1, 1000);
+      |                                                                                            ^
+../Core/Src/main.c:170:95: error: expected declaration specifiers or '...' before numeric constant
+  170 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, &value, 1, 1000);
+      |                                                                                               ^~~~
+../Core/Src/main.c:171:24: error: expected declaration specifiers or '...' before string constant
+  171 |                 printf("Addr 0x%02X: 0x%02x\n", addr, value);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:171:49: error: unknown type name 'addr'
+  171 |                 printf("Addr 0x%02X: 0x%02x\n", addr, value);
+      |                                                 ^~~~
+../Core/Src/main.c:171:55: error: unknown type name 'value'
+  171 |                 printf("Addr 0x%02X: 0x%02x\n", addr, value);
+      |                                                       ^~~~~
+../Core/Src/main.c:172:9: error: expected identifier or '(' before '}' token
+  172 |         }
+      |         ^
+../Core/Src/main.c:173:1: error: expected identifier or '(' before '}' token
+  173 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
 "make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:32:51 **** Incremental Build of configuration Debug for project lecture5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lecture5.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture5.elf
+ 
+arm-none-eabi-size  lecture5.elf 
+arm-none-eabi-objdump -h -S lecture5.elf  > "lecture5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21628	    104	   2328	  24060	   5dfc	lecture5.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture5.list
+ 
+12:39:47 **** Incremental Build of configuration Debug for project lecture5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lecture5.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture5.elf
+ 
+arm-none-eabi-size  lecture5.elf 
+arm-none-eabi-objdump -h -S lecture5.elf  > "lecture5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21500	    104	   2328	  23932	   5d7c	lecture5.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture5.list
+ 
+12:40:48 **** Incremental Build of configuration Debug for project lecture5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:168:28: warning: too many arguments for format [-Wformat-extra-args]
+  168 |                     printf("0x%02X ", addr, value);
+      |                            ^~~~~~~~~
+arm-none-eabi-gcc -o "lecture5.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture5.elf
+ 
+arm-none-eabi-size  lecture5.elf 
+arm-none-eabi-objdump -h -S lecture5.elf  > "lecture5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21616	    104	   2328	  24048	   5df0	lecture5.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture5.list
+ 
+12:41:55 **** Incremental Build of configuration Debug for project lecture5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:167:29: warning: unused variable 'value' [-Wunused-variable]
+  167 |                     uint8_t value = EEPROM_Read(addr);
+      |                             ^~~~~
+arm-none-eabi-gcc -o "lecture5.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture5.elf
+ 
+arm-none-eabi-size  lecture5.elf 
+arm-none-eabi-objdump -h -S lecture5.elf  > "lecture5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21612	    104	   2328	  24044	   5dec	lecture5.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture5.list
+ 
+12:43:09 **** Incremental Build of configuration Debug for project lecture5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:168:34: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat=]
+  168 |                     printf("0x%02x\n ");
+      |                               ~~~^
+      |                                  |
+      |                                  unsigned int
+../Core/Src/main.c:167:29: warning: unused variable 'value' [-Wunused-variable]
+  167 |                     uint8_t value = EEPROM_Read(addr);
+      |                             ^~~~~
+arm-none-eabi-gcc -o "lecture5.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture5.elf
+ 
+arm-none-eabi-size  lecture5.elf 
+arm-none-eabi-objdump -h -S lecture5.elf  > "lecture5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21612	    104	   2328	  24044	   5dec	lecture5.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture5.list
+ 
+12:43:54 **** Incremental Build of configuration Debug for project lecture5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:168:28: warning: too many arguments for format [-Wformat-extra-args]
+  168 |                     printf("0x%02x\n ", addr,value);
+      |                            ^~~~~~~~~~~
+arm-none-eabi-gcc -o "lecture5.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture5.elf
+ 
+arm-none-eabi-size  lecture5.elf 
+arm-none-eabi-objdump -h -S lecture5.elf  > "lecture5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21620	    104	   2328	  24052	   5df4	lecture5.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture5.list
+ 
+12:45:49 **** Incremental Build of configuration Debug for project lecture5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:169:41: warning: embedded '\0' in format [-Wformat-contains-nul]
+  169 |                     printf("dump 0x%02x:\0x%02xn",addr, value);
+      |                                         ^~
+../Core/Src/main.c:169:28: warning: too many arguments for format [-Wformat-extra-args]
+  169 |                     printf("dump 0x%02x:\0x%02xn",addr, value);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "lecture5.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture5.elf
+ 
+arm-none-eabi-size  lecture5.elf 
+arm-none-eabi-objdump -h -S lecture5.elf  > "lecture5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21572	    104	   2328	  24004	   5dc4	lecture5.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture5.list
+ 
+12:46:54 **** Incremental Build of configuration Debug for project lecture5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:169:41: warning: embedded '\0' in format [-Wformat-contains-nul]
+  169 |                     printf("dump 0x%02x:\0x%02x\n",addr, value);
+      |                                         ^~
+../Core/Src/main.c:169:28: warning: too many arguments for format [-Wformat-extra-args]
+  169 |                     printf("dump 0x%02x:\0x%02x\n",addr, value);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "lecture5.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture5.elf
+ 
+arm-none-eabi-size  lecture5.elf 
+arm-none-eabi-objdump -h -S lecture5.elf  > "lecture5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21572	    104	   2328	  24004	   5dc4	lecture5.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture5.list
+ 
+12:47:45 **** Incremental Build of configuration Debug for project lecture5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:169:36: warning: embedded '\0' in format [-Wformat-contains-nul]
+  169 |                     printf("0x%02x:\0x%02x\n",addr, value);
+      |                                    ^~
+../Core/Src/main.c:169:28: warning: too many arguments for format [-Wformat-extra-args]
+  169 |                     printf("0x%02x:\0x%02x\n",addr, value);
+      |                            ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "lecture5.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture5.elf
+ 
+arm-none-eabi-size  lecture5.elf 
+arm-none-eabi-objdump -h -S lecture5.elf  > "lecture5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21568	    104	   2328	  24000	   5dc0	lecture5.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture5.list
+ 
+12:48:29 **** Incremental Build of configuration Debug for project lecture5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:169:36: warning: embedded '\0' in format [-Wformat-contains-nul]
+  169 |                     printf("0x%02x:\0x%02x\n",value);
+      |                                    ^~
+arm-none-eabi-gcc -o "lecture5.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture5.elf
+ 
+arm-none-eabi-size  lecture5.elf 
+arm-none-eabi-objdump -h -S lecture5.elf  > "lecture5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21568	    104	   2328	  24000	   5dc0	lecture5.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture5.list
+ 
+12:50:15 **** Incremental Build of configuration Debug for project lecture5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:169:42: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat=]
+  169 |                     printf("0x%02x: 0x%02x\n",value);
+      |                                       ~~~^
+      |                                          |
+      |                                          unsigned int
+arm-none-eabi-gcc -o "lecture5.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture5.elf
+ 
+arm-none-eabi-size  lecture5.elf 
+arm-none-eabi-objdump -h -S lecture5.elf  > "lecture5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21568	    104	   2328	  24000	   5dc0	lecture5.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture5.list
+ 
+12:51:20 **** Incremental Build of configuration Debug for project lecture5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lecture5.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture5.elf
+ 
+arm-none-eabi-size  lecture5.elf 
+arm-none-eabi-objdump -h -S lecture5.elf  > "lecture5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21572	    104	   2328	  24004	   5dc4	lecture5.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture5.list
+ 
+12:52:45 **** Incremental Build of configuration Debug for project lecture5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lecture5.elf" @"objects.list"   -mcpu=cortex-m0 -T"P:\MKS\lecture5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture5.elf
+ 
+arm-none-eabi-size  lecture5.elf 
+arm-none-eabi-objdump -h -S lecture5.elf  > "lecture5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21564	    104	   2328	  23996	   5dbc	lecture5.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture5.list
+ 

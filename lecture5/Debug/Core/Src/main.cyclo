@@ -1,0 +1,12 @@
+../Core/Src/main.c:70:5:_write	1
+../Core/Src/main.c:77:9:EEPROM_Read	1
+../Core/Src/main.c:84:6:EEPROM_Write	2
+../Core/Src/main.c:90:13:uart_process_command	18
+../Core/Src/main.c:179:13:uart_byte_available	7
+../Core/Src/main.c:198:5:main	3
+../Core/Src/main.c:260:6:SystemClock_Config	4
+../Core/Src/main.c:306:13:MX_I2C1_Init	4
+../Core/Src/main.c:354:13:MX_USART2_UART_Init	2
+../Core/Src/main.c:387:13:MX_DMA_Init	1
+../Core/Src/main.c:405:13:MX_GPIO_Init	1
+../Core/Src/main.c:455:6:Error_Handler	1
