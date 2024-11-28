@@ -1,545 +1,451 @@
-10:35:51 **** Build of configuration Debug for project lpcxpresso55s69_hello_world ****
-make -r -j4 all 
-Building file: ../utilities/fsl_assert.c
-Building file: ../utilities/fsl_debug_console.c
-Building file: ../utilities/fsl_str.c
-Building file: ../utilities/fsl_memcpy.S
-Invoking: MCU C Compiler
-Invoking: MCU Assembler
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../utilities/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"utilities/fsl_assert.d" -MT"utilities/fsl_assert.o" -MT"utilities/fsl_assert.d" -o "utilities/fsl_assert.o" "../utilities/fsl_assert.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../utilities/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"utilities/fsl_debug_console.d" -MT"utilities/fsl_debug_console.o" -MT"utilities/fsl_debug_console.d" -o "utilities/fsl_debug_console.o" "../utilities/fsl_debug_console.c"
-arm-none-eabi-gcc -c -x assembler-with-cpp -D__REDLIB__ -I"P:\MKS\lpcxpresso55s69_hello_world\source" -g3 -gdwarf-4 -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -o "utilities/fsl_memcpy.o" "../utilities/fsl_memcpy.S"
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../utilities/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"utilities/fsl_str.d" -MT"utilities/fsl_str.o" -MT"utilities/fsl_str.d" -o "utilities/fsl_str.o" "../utilities/fsl_str.c"
-Finished building: ../utilities/fsl_memcpy.S
+10:03:35 **** Clean-only build of configuration Debug for project lpcxpresso55s69_hello_world_ns ****
+make clean 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:/appz/ST/STM32CubeIDE_1.10.1/STM32CubeIDE//plugins/com.st.stm32cube.ide.jre.win64_3.2.0.202405231314/jre/bin/server;C:/appz/ST/STM32CubeIDE_1.10.1/STM32CubeIDE//plugins/com.st.stm32cube.ide.jre.win64_3.2.0.202405231314/jre/bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\appz\Python312\Scripts\;C:\appz\Python312\;C:\appz\flutter\bin;C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\MATLAB\MATLAB Runtime\v95\runtime\win64;C:\Program Files\MATLAB\MATLAB Runtime\R2023a\runtime\win64;C:\Program Files\MATLAB\R2024a\runtime\win64;C:\Program Files\MATLAB\R2024a\bin;C:\Program Files\MATLAB\R2023a\runtime\win64;C:\Program Files\MATLAB\R2023a\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\Program Files\PuTTY\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\240641\AppData\Local\Microsoft\WindowsApps;;C:\appz\ST\STM32CubeIDE_1.10.1\STM32CubeIDE;]
+10:20:52 **** Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f429zitx.d" -MT"Core/Startup/startup_stm32f429zitx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f429zitx.o" "../Core/Startup/startup_stm32f429zitx.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
  
-Building file: ../startup/boot_multicore_slave.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../startup/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"startup/boot_multicore_slave.d" -MT"startup/boot_multicore_slave.o" -MT"startup/boot_multicore_slave.d" -o "startup/boot_multicore_slave.o" "../startup/boot_multicore_slave.c"
-Finished building: ../startup/boot_multicore_slave.c
- 
-Building file: ../startup/startup_lpc55s69_cm33_core0.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../startup/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"startup/startup_lpc55s69_cm33_core0.d" -MT"startup/startup_lpc55s69_cm33_core0.o" -MT"startup/startup_lpc55s69_cm33_core0.d" -o "startup/startup_lpc55s69_cm33_core0.o" "../startup/startup_lpc55s69_cm33_core0.c"
-Finished building: ../utilities/fsl_assert.c
- 
-Finished building: ../utilities/fsl_debug_console.c
-Building file: ../source/hello_world.c
-Finished building: ../utilities/fsl_str.c
- 
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/hello_world.d" -MT"source/hello_world.o" -MT"source/hello_world.d" -o "source/hello_world.o" "../source/hello_world.c"
- 
-Building file: ../source/semihost_hardfault.c
-Building file: ../drivers/fsl_clock.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/semihost_hardfault.d" -MT"source/semihost_hardfault.o" -MT"source/semihost_hardfault.d" -o "source/semihost_hardfault.o" "../source/semihost_hardfault.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_clock.d" -MT"drivers/fsl_clock.o" -MT"drivers/fsl_clock.d" -o "drivers/fsl_clock.o" "../drivers/fsl_clock.c"
-Finished building: ../startup/startup_lpc55s69_cm33_core0.c
- 
-Finished building: ../source/semihost_hardfault.c
-Building file: ../drivers/fsl_common.c
- 
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_common.d" -MT"drivers/fsl_common.o" -MT"drivers/fsl_common.d" -o "drivers/fsl_common.o" "../drivers/fsl_common.c"
-Building file: ../drivers/fsl_common_arm.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_common_arm.d" -MT"drivers/fsl_common_arm.o" -MT"drivers/fsl_common_arm.d" -o "drivers/fsl_common_arm.o" "../drivers/fsl_common_arm.c"
-Finished building: ../source/hello_world.c
- 
-Finished building: ../drivers/fsl_clock.c
-Building file: ../drivers/fsl_ctimer.c
- 
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_ctimer.d" -MT"drivers/fsl_ctimer.o" -MT"drivers/fsl_ctimer.d" -o "drivers/fsl_ctimer.o" "../drivers/fsl_ctimer.c"
-Building file: ../drivers/fsl_flexcomm.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_flexcomm.d" -MT"drivers/fsl_flexcomm.o" -MT"drivers/fsl_flexcomm.d" -o "drivers/fsl_flexcomm.o" "../drivers/fsl_flexcomm.c"
-Finished building: ../drivers/fsl_common.c
- 
-Finished building: ../drivers/fsl_common_arm.c
-Building file: ../drivers/fsl_gpio.c
- 
-Invoking: MCU C Compiler
-Building file: ../drivers/fsl_power.c
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_gpio.d" -MT"drivers/fsl_gpio.o" -MT"drivers/fsl_gpio.d" -o "drivers/fsl_gpio.o" "../drivers/fsl_gpio.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_power.d" -MT"drivers/fsl_power.o" -MT"drivers/fsl_power.d" -o "drivers/fsl_power.o" "../drivers/fsl_power.c"
-Finished building: ../drivers/fsl_ctimer.c
- 
-Finished building: ../drivers/fsl_flexcomm.c
-Building file: ../drivers/fsl_reset.c
- 
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_reset.d" -MT"drivers/fsl_reset.o" -MT"drivers/fsl_reset.d" -o "drivers/fsl_reset.o" "../drivers/fsl_reset.c"
-Building file: ../drivers/fsl_usart.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_usart.d" -MT"drivers/fsl_usart.o" -MT"drivers/fsl_usart.d" -o "drivers/fsl_usart.o" "../drivers/fsl_usart.c"
-Finished building: ../drivers/fsl_gpio.c
- 
-Building file: ../device/system_LPC55S69_cm33_core0.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../device/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"device/system_LPC55S69_cm33_core0.d" -MT"device/system_LPC55S69_cm33_core0.o" -MT"device/system_LPC55S69_cm33_core0.d" -o "device/system_LPC55S69_cm33_core0.o" "../device/system_LPC55S69_cm33_core0.c"
-Finished building: ../drivers/fsl_power.c
- 
-Building file: ../component/uart/fsl_adapter_usart.c
-Finished building: ../drivers/fsl_reset.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../component/uart/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"component/uart/fsl_adapter_usart.d" -MT"component/uart/fsl_adapter_usart.o" -MT"component/uart/fsl_adapter_usart.d" -o "component/uart/fsl_adapter_usart.o" "../component/uart/fsl_adapter_usart.c"
- 
-Building file: ../component/lists/fsl_component_generic_list.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../component/lists/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"component/lists/fsl_component_generic_list.d" -MT"component/lists/fsl_component_generic_list.o" -MT"component/lists/fsl_component_generic_list.d" -o "component/lists/fsl_component_generic_list.o" "../component/lists/fsl_component_generic_list.c"
-Finished building: ../drivers/fsl_usart.c
- 
-Finished building: ../device/system_LPC55S69_cm33_core0.c
-Building file: ../board/board.c
- 
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/board.d" -MT"board/board.o" -MT"board/board.d" -o "board/board.o" "../board/board.c"
-Building file: ../board/clock_config.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/clock_config.d" -MT"board/clock_config.o" -MT"board/clock_config.d" -o "board/clock_config.o" "../board/clock_config.c"
-Finished building: ../component/uart/fsl_adapter_usart.c
- 
-Finished building: ../component/lists/fsl_component_generic_list.c
-Building file: ../board/pin_mux.c
- 
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/pin_mux.d" -MT"board/pin_mux.o" -MT"board/pin_mux.d" -o "board/pin_mux.o" "../board/pin_mux.c"
-Finished building: ../board/board.c
- 
-Finished building: ../board/clock_config.c
- 
-Finished building: ../board/pin_mux.c
- 
-Building target: lpcxpresso55s69_hello_world.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -no-warn-rwx-segments -Xlinker -Map="lpcxpresso55s69_hello_world.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T lpcxpresso55s69_hello_world_Debug.ld -o "lpcxpresso55s69_hello_world.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_memcpy.o ./utilities/fsl_str.o  ./startup/boot_multicore_slave.o ./startup/startup_lpc55s69_cm33_core0.o  ./source/hello_world.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_flexcomm.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_usart.o  ./device/system_LPC55S69_cm33_core0.o  ./component/uart/fsl_adapter_usart.o  ./component/lists/fsl_component_generic_list.o  ./board/board.o ./board/clock_config.o ./board/pin_mux.o   
-Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:       13664 B       630 KB      2.12%
-            SRAM:        8508 B       256 KB      3.25%
-           SRAMX:          0 GB        32 KB      0.00%
-         USB_RAM:          0 GB        16 KB      0.00%
-           SRAM4:          0 GB        16 KB      0.00%
-Finished building target: lpcxpresso55s69_hello_world.axf
- 
-Performing post-build steps
-arm-none-eabi-size "lpcxpresso55s69_hello_world.axf"; # arm-none-eabi-objcopy -v -O binary "lpcxpresso55s69_hello_world.axf" "lpcxpresso55s69_hello_world.bin" ; # checksum -p LPC55S69 -d "lpcxpresso55s69_hello_world.bin";
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
    text	   data	    bss	    dec	    hex	filename
-  13656	      8	   8500	  22164	   5694	lpcxpresso55s69_hello_world.axf
+  10968	    104	   1976	  13048	   32f8	lecture10.elf
+Finished building: default.size.stdout
  
-10:44:54 **** Incremental Build of configuration Debug for project lpcxpresso55s69_hello_world ****
-make -r -j4 all 
-Building file: ../source/hello_world.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/hello_world.d" -MT"source/hello_world.o" -MT"source/hello_world.d" -o "source/hello_world.o" "../source/hello_world.c"
-Finished building: ../source/hello_world.c
+Finished building: lecture10.list
  
-Building target: lpcxpresso55s69_hello_world.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -no-warn-rwx-segments -Xlinker -Map="lpcxpresso55s69_hello_world.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T lpcxpresso55s69_hello_world_Debug.ld -o "lpcxpresso55s69_hello_world.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_memcpy.o ./utilities/fsl_str.o  ./startup/boot_multicore_slave.o ./startup/startup_lpc55s69_cm33_core0.o  ./source/hello_world.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_flexcomm.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_usart.o  ./device/system_LPC55S69_cm33_core0.o  ./component/uart/fsl_adapter_usart.o  ./component/lists/fsl_component_generic_list.o  ./board/board.o ./board/clock_config.o ./board/pin_mux.o   
-Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:       13672 B       630 KB      2.12%
-            SRAM:        8512 B       256 KB      3.25%
-           SRAMX:          0 GB        32 KB      0.00%
-         USB_RAM:          0 GB        16 KB      0.00%
-           SRAM4:          0 GB        16 KB      0.00%
-Finished building target: lpcxpresso55s69_hello_world.axf
- 
-Performing post-build steps
-arm-none-eabi-size "lpcxpresso55s69_hello_world.axf"; # arm-none-eabi-objcopy -v -O binary "lpcxpresso55s69_hello_world.axf" "lpcxpresso55s69_hello_world.bin" ; # checksum -p LPC55S69 -d "lpcxpresso55s69_hello_world.bin";
+10:21:07 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-size  lecture10.elf 
    text	   data	    bss	    dec	    hex	filename
-  13664	      8	   8504	  22176	   56a0	lpcxpresso55s69_hello_world.axf
+  10968	    104	   1976	  13048	   32f8	lecture10.elf
+Finished building: default.size.stdout
  
-11:22:27 **** Clean-only build of configuration Debug for project lpcxpresso55s69_hello_world ****
-make -r -j4 clean 
-rm -rf ./utilities/fsl_assert.d ./utilities/fsl_assert.o ./utilities/fsl_debug_console.d ./utilities/fsl_debug_console.o ./utilities/fsl_memcpy.o ./utilities/fsl_str.d ./utilities/fsl_str.o
-rm -rf ./startup/boot_multicore_slave.d ./startup/boot_multicore_slave.o ./startup/startup_lpc55s69_cm33_core0.d ./startup/startup_lpc55s69_cm33_core0.o
-rm -rf ./source/hello_world.d ./source/hello_world.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o
-rm -rf ./drivers/fsl_clock.d ./drivers/fsl_clock.o ./drivers/fsl_common.d ./drivers/fsl_common.o ./drivers/fsl_common_arm.d ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.d ./drivers/fsl_ctimer.o ./drivers/fsl_flexcomm.d ./drivers/fsl_flexcomm.o ./drivers/fsl_gpio.d ./drivers/fsl_gpio.o ./drivers/fsl_power.d ./drivers/fsl_power.o ./drivers/fsl_reset.d ./drivers/fsl_reset.o ./drivers/fsl_usart.d ./drivers/fsl_usart.o
-rm -rf ./device/system_LPC55S69_cm33_core0.d ./device/system_LPC55S69_cm33_core0.o
-rm -rf ./component/uart/fsl_adapter_usart.d ./component/uart/fsl_adapter_usart.o
-rm -rf ./component/lists/fsl_component_generic_list.d ./component/lists/fsl_component_generic_list.o
-rm -rf ./board/board.d ./board/board.o ./board/clock_config.d ./board/clock_config.o ./board/pin_mux.d ./board/pin_mux.o
-rm -rf lpcxpresso55s69_hello_world.axf
- 
-11:22:28 **** Incremental Build of configuration Debug for project lpcxpresso55s69_hello_world ****
-make -r -j4 all 
-Building file: ../utilities/fsl_assert.c
-Building file: ../utilities/fsl_debug_console.c
-Building file: ../utilities/fsl_memcpy.S
-Building file: ../utilities/fsl_str.c
-Invoking: MCU C Compiler
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../utilities/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"utilities/fsl_assert.d" -MT"utilities/fsl_assert.o" -MT"utilities/fsl_assert.d" -o "utilities/fsl_assert.o" "../utilities/fsl_assert.c"
-Invoking: MCU Assembler
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../utilities/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"utilities/fsl_debug_console.d" -MT"utilities/fsl_debug_console.o" -MT"utilities/fsl_debug_console.d" -o "utilities/fsl_debug_console.o" "../utilities/fsl_debug_console.c"
-arm-none-eabi-gcc -c -x assembler-with-cpp -D__REDLIB__ -I"P:\MKS\lpcxpresso55s69_hello_world\source" -g3 -gdwarf-4 -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -o "utilities/fsl_memcpy.o" "../utilities/fsl_memcpy.S"
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../utilities/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"utilities/fsl_str.d" -MT"utilities/fsl_str.o" -MT"utilities/fsl_str.d" -o "utilities/fsl_str.o" "../utilities/fsl_str.c"
-Finished building: ../utilities/fsl_memcpy.S
- 
-Building file: ../startup/boot_multicore_slave.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../startup/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"startup/boot_multicore_slave.d" -MT"startup/boot_multicore_slave.o" -MT"startup/boot_multicore_slave.d" -o "startup/boot_multicore_slave.o" "../startup/boot_multicore_slave.c"
-Finished building: ../startup/boot_multicore_slave.c
- 
-Building file: ../startup/startup_lpc55s69_cm33_core0.c
-Finished building: ../utilities/fsl_assert.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../startup/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"startup/startup_lpc55s69_cm33_core0.d" -MT"startup/startup_lpc55s69_cm33_core0.o" -MT"startup/startup_lpc55s69_cm33_core0.d" -o "startup/startup_lpc55s69_cm33_core0.o" "../startup/startup_lpc55s69_cm33_core0.c"
- 
-Finished building: ../utilities/fsl_debug_console.c
-Building file: ../source/hello_world.c
- 
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/hello_world.d" -MT"source/hello_world.o" -MT"source/hello_world.d" -o "source/hello_world.o" "../source/hello_world.c"
-Finished building: ../utilities/fsl_str.c
-Building file: ../source/semihost_hardfault.c
- 
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/semihost_hardfault.d" -MT"source/semihost_hardfault.o" -MT"source/semihost_hardfault.d" -o "source/semihost_hardfault.o" "../source/semihost_hardfault.c"
-Building file: ../drivers/fsl_clock.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_clock.d" -MT"drivers/fsl_clock.o" -MT"drivers/fsl_clock.d" -o "drivers/fsl_clock.o" "../drivers/fsl_clock.c"
-Finished building: ../startup/startup_lpc55s69_cm33_core0.c
-Finished building: ../source/semihost_hardfault.c
- 
- 
-Building file: ../drivers/fsl_common.c
-Building file: ../drivers/fsl_common_arm.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_common.d" -MT"drivers/fsl_common.o" -MT"drivers/fsl_common.d" -o "drivers/fsl_common.o" "../drivers/fsl_common.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_common_arm.d" -MT"drivers/fsl_common_arm.o" -MT"drivers/fsl_common_arm.d" -o "drivers/fsl_common_arm.o" "../drivers/fsl_common_arm.c"
-Finished building: ../source/hello_world.c
- 
-Building file: ../drivers/fsl_ctimer.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_ctimer.d" -MT"drivers/fsl_ctimer.o" -MT"drivers/fsl_ctimer.d" -o "drivers/fsl_ctimer.o" "../drivers/fsl_ctimer.c"
-Finished building: ../drivers/fsl_clock.c
- 
-Building file: ../drivers/fsl_flexcomm.c
-Finished building: ../drivers/fsl_common.c
-Finished building: ../drivers/fsl_common_arm.c
-Invoking: MCU C Compiler
- 
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_flexcomm.d" -MT"drivers/fsl_flexcomm.o" -MT"drivers/fsl_flexcomm.d" -o "drivers/fsl_flexcomm.o" "../drivers/fsl_flexcomm.c"
- 
-Building file: ../drivers/fsl_gpio.c
-Building file: ../drivers/fsl_power.c
-Invoking: MCU C Compiler
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_gpio.d" -MT"drivers/fsl_gpio.o" -MT"drivers/fsl_gpio.d" -o "drivers/fsl_gpio.o" "../drivers/fsl_gpio.c"
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_power.d" -MT"drivers/fsl_power.o" -MT"drivers/fsl_power.d" -o "drivers/fsl_power.o" "../drivers/fsl_power.c"
-Finished building: ../drivers/fsl_ctimer.c
- 
-Building file: ../drivers/fsl_reset.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_reset.d" -MT"drivers/fsl_reset.o" -MT"drivers/fsl_reset.d" -o "drivers/fsl_reset.o" "../drivers/fsl_reset.c"
-Finished building: ../drivers/fsl_flexcomm.c
- 
-Finished building: ../drivers/fsl_gpio.c
- 
-Building file: ../drivers/fsl_usart.c
-Building file: ../device/system_LPC55S69_cm33_core0.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_usart.d" -MT"drivers/fsl_usart.o" -MT"drivers/fsl_usart.d" -o "drivers/fsl_usart.o" "../drivers/fsl_usart.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../device/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"device/system_LPC55S69_cm33_core0.d" -MT"device/system_LPC55S69_cm33_core0.o" -MT"device/system_LPC55S69_cm33_core0.d" -o "device/system_LPC55S69_cm33_core0.o" "../device/system_LPC55S69_cm33_core0.c"
-Finished building: ../drivers/fsl_power.c
- 
-Building file: ../component/uart/fsl_adapter_usart.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../component/uart/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"component/uart/fsl_adapter_usart.d" -MT"component/uart/fsl_adapter_usart.o" -MT"component/uart/fsl_adapter_usart.d" -o "component/uart/fsl_adapter_usart.o" "../component/uart/fsl_adapter_usart.c"
-Finished building: ../drivers/fsl_reset.c
- 
-Building file: ../component/lists/fsl_component_generic_list.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../component/lists/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"component/lists/fsl_component_generic_list.d" -MT"component/lists/fsl_component_generic_list.o" -MT"component/lists/fsl_component_generic_list.d" -o "component/lists/fsl_component_generic_list.o" "../component/lists/fsl_component_generic_list.c"
-Finished building: ../device/system_LPC55S69_cm33_core0.c
- 
-Building file: ../board/board.c
-Invoking: MCU C Compiler
-Finished building: ../drivers/fsl_usart.c
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/board.d" -MT"board/board.o" -MT"board/board.d" -o "board/board.o" "../board/board.c"
- 
-Building file: ../board/clock_config.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/clock_config.d" -MT"board/clock_config.o" -MT"board/clock_config.d" -o "board/clock_config.o" "../board/clock_config.c"
-Finished building: ../component/uart/fsl_adapter_usart.c
- 
-Building file: ../board/peripherals.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/peripherals.d" -MT"board/peripherals.o" -MT"board/peripherals.d" -o "board/peripherals.o" "../board/peripherals.c"
-Finished building: ../component/lists/fsl_component_generic_list.c
- 
-Building file: ../board/pin_mux.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/pin_mux.d" -MT"board/pin_mux.o" -MT"board/pin_mux.d" -o "board/pin_mux.o" "../board/pin_mux.c"
-Finished building: ../board/board.c
- 
-Finished building: ../board/clock_config.c
- 
-Finished building: ../board/peripherals.c
- 
-Finished building: ../board/pin_mux.c
- 
-Building target: lpcxpresso55s69_hello_world.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -no-warn-rwx-segments -Xlinker -Map="lpcxpresso55s69_hello_world.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T lpcxpresso55s69_hello_world_Debug.ld -o "lpcxpresso55s69_hello_world.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_memcpy.o ./utilities/fsl_str.o  ./startup/boot_multicore_slave.o ./startup/startup_lpc55s69_cm33_core0.o  ./source/hello_world.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_flexcomm.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_usart.o  ./device/system_LPC55S69_cm33_core0.o  ./component/uart/fsl_adapter_usart.o  ./component/lists/fsl_component_generic_list.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
-Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:       14708 B       630 KB      2.28%
-            SRAM:        8516 B       256 KB      3.25%
-           SRAMX:          0 GB        32 KB      0.00%
-         USB_RAM:          0 GB        16 KB      0.00%
-           SRAM4:          0 GB        16 KB      0.00%
-Finished building target: lpcxpresso55s69_hello_world.axf
- 
-Performing post-build steps
-arm-none-eabi-size "lpcxpresso55s69_hello_world.axf"; # arm-none-eabi-objcopy -v -O binary "lpcxpresso55s69_hello_world.axf" "lpcxpresso55s69_hello_world.bin" ; # checksum -p LPC55S69 -d "lpcxpresso55s69_hello_world.bin";
+10:22:24 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-size  lecture10.elf 
    text	   data	    bss	    dec	    hex	filename
-  14696	     12	   8504	  23212	   5aac	lpcxpresso55s69_hello_world.axf
+  10968	    104	   1976	  13048	   32f8	lecture10.elf
+Finished building: default.size.stdout
  
-11:38:29 **** Incremental Build of configuration Debug for project lpcxpresso55s69_hello_world ****
-make -r -j4 all 
-Building file: ../source/hello_world.c
-Invoking: MCU C Compiler
-Building file: ../board/board.c
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/hello_world.d" -MT"source/hello_world.o" -MT"source/hello_world.d" -o "source/hello_world.o" "../source/hello_world.c"
-Building file: ../board/clock_config.c
-Building file: ../board/peripherals.c
-Invoking: MCU C Compiler
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/board.d" -MT"board/board.o" -MT"board/board.d" -o "board/board.o" "../board/board.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/clock_config.d" -MT"board/clock_config.o" -MT"board/clock_config.d" -o "board/clock_config.o" "../board/clock_config.c"
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/peripherals.d" -MT"board/peripherals.o" -MT"board/peripherals.d" -o "board/peripherals.o" "../board/peripherals.c"
-Finished building: ../source/hello_world.c
-Finished building: ../board/peripherals.c
-Finished building: ../board/board.c
-Finished building: ../board/clock_config.c
- 
- 
- 
- 
-Building file: ../board/pin_mux.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/pin_mux.d" -MT"board/pin_mux.o" -MT"board/pin_mux.d" -o "board/pin_mux.o" "../board/pin_mux.c"
-Finished building: ../board/pin_mux.c
- 
-Building target: lpcxpresso55s69_hello_world.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -no-warn-rwx-segments -Xlinker -Map="lpcxpresso55s69_hello_world.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T lpcxpresso55s69_hello_world_Debug.ld -o "lpcxpresso55s69_hello_world.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_memcpy.o ./utilities/fsl_str.o  ./startup/boot_multicore_slave.o ./startup/startup_lpc55s69_cm33_core0.o  ./source/hello_world.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_flexcomm.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_usart.o  ./device/system_LPC55S69_cm33_core0.o  ./component/uart/fsl_adapter_usart.o  ./component/lists/fsl_component_generic_list.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
-Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:       14860 B       630 KB      2.30%
-            SRAM:        8520 B       256 KB      3.25%
-           SRAMX:          0 GB        32 KB      0.00%
-         USB_RAM:          0 GB        16 KB      0.00%
-           SRAM4:          0 GB        16 KB      0.00%
-Finished building target: lpcxpresso55s69_hello_world.axf
- 
-Performing post-build steps
-arm-none-eabi-size "lpcxpresso55s69_hello_world.axf"; # arm-none-eabi-objcopy -v -O binary "lpcxpresso55s69_hello_world.axf" "lpcxpresso55s69_hello_world.bin" ; # checksum -p LPC55S69 -d "lpcxpresso55s69_hello_world.bin";
+10:24:00 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-size  lecture10.elf 
    text	   data	    bss	    dec	    hex	filename
-  14844	     16	   8504	  23364	   5b44	lpcxpresso55s69_hello_world.axf
+  10968	    104	   1976	  13048	   32f8	lecture10.elf
+Finished building: default.size.stdout
  
-11:39:06 **** Incremental Build of configuration Debug for project lpcxpresso55s69_hello_world ****
-make -r -j4 all 
-Building file: ../source/hello_world.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/hello_world.d" -MT"source/hello_world.o" -MT"source/hello_world.d" -o "source/hello_world.o" "../source/hello_world.c"
-Finished building: ../source/hello_world.c
- 
-Building target: lpcxpresso55s69_hello_world.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -no-warn-rwx-segments -Xlinker -Map="lpcxpresso55s69_hello_world.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T lpcxpresso55s69_hello_world_Debug.ld -o "lpcxpresso55s69_hello_world.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_memcpy.o ./utilities/fsl_str.o  ./startup/boot_multicore_slave.o ./startup/startup_lpc55s69_cm33_core0.o  ./source/hello_world.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_flexcomm.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_usart.o  ./device/system_LPC55S69_cm33_core0.o  ./component/uart/fsl_adapter_usart.o  ./component/lists/fsl_component_generic_list.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
-Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:       14868 B       630 KB      2.30%
-            SRAM:        8520 B       256 KB      3.25%
-           SRAMX:          0 GB        32 KB      0.00%
-         USB_RAM:          0 GB        16 KB      0.00%
-           SRAM4:          0 GB        16 KB      0.00%
-Finished building target: lpcxpresso55s69_hello_world.axf
- 
-Performing post-build steps
-arm-none-eabi-size "lpcxpresso55s69_hello_world.axf"; # arm-none-eabi-objcopy -v -O binary "lpcxpresso55s69_hello_world.axf" "lpcxpresso55s69_hello_world.bin" ; # checksum -p LPC55S69 -d "lpcxpresso55s69_hello_world.bin";
+10:24:42 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-size  lecture10.elf 
    text	   data	    bss	    dec	    hex	filename
-  14852	     16	   8504	  23372	   5b4c	lpcxpresso55s69_hello_world.axf
+  10968	    104	   1976	  13048	   32f8	lecture10.elf
+Finished building: default.size.stdout
  
-12:01:30 **** Incremental Build of configuration Debug for project lpcxpresso55s69_hello_world ****
-make -r -j4 all 
-Building file: ../source/hello_world.c
-Invoking: MCU C Compiler
-Building file: ../board/board.c
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/hello_world.d" -MT"source/hello_world.o" -MT"source/hello_world.d" -o "source/hello_world.o" "../source/hello_world.c"
-Building file: ../board/clock_config.c
-Building file: ../board/peripherals.c
-Invoking: MCU C Compiler
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/board.d" -MT"board/board.o" -MT"board/board.d" -o "board/board.o" "../board/board.c"
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/clock_config.d" -MT"board/clock_config.o" -MT"board/clock_config.d" -o "board/clock_config.o" "../board/clock_config.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/peripherals.d" -MT"board/peripherals.o" -MT"board/peripherals.d" -o "board/peripherals.o" "../board/peripherals.c"
-Finished building: ../board/board.c
-Finished building: ../board/clock_config.c
- 
-Finished building: ../board/peripherals.c
-Finished building: ../source/hello_world.c
- 
- 
-Building file: ../board/pin_mux.c
- 
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/pin_mux.d" -MT"board/pin_mux.o" -MT"board/pin_mux.d" -o "board/pin_mux.o" "../board/pin_mux.c"
-Finished building: ../board/pin_mux.c
- 
-Building target: lpcxpresso55s69_hello_world.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -no-warn-rwx-segments -Xlinker -Map="lpcxpresso55s69_hello_world.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T lpcxpresso55s69_hello_world_Debug.ld -o "lpcxpresso55s69_hello_world.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_memcpy.o ./utilities/fsl_str.o  ./startup/boot_multicore_slave.o ./startup/startup_lpc55s69_cm33_core0.o  ./source/hello_world.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_flexcomm.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_usart.o  ./device/system_LPC55S69_cm33_core0.o  ./component/uart/fsl_adapter_usart.o  ./component/lists/fsl_component_generic_list.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
-Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:       15032 B       630 KB      2.33%
-            SRAM:        8524 B       256 KB      3.25%
-           SRAMX:          0 GB        32 KB      0.00%
-         USB_RAM:          0 GB        16 KB      0.00%
-           SRAM4:          0 GB        16 KB      0.00%
-Finished building target: lpcxpresso55s69_hello_world.axf
- 
-Performing post-build steps
-arm-none-eabi-size "lpcxpresso55s69_hello_world.axf"; # arm-none-eabi-objcopy -v -O binary "lpcxpresso55s69_hello_world.axf" "lpcxpresso55s69_hello_world.bin" ; # checksum -p LPC55S69 -d "lpcxpresso55s69_hello_world.bin";
+10:24:59 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-size  lecture10.elf 
    text	   data	    bss	    dec	    hex	filename
-  15012	     20	   8504	  23536	   5bf0	lpcxpresso55s69_hello_world.axf
+  10968	    104	   1976	  13048	   32f8	lecture10.elf
+Finished building: default.size.stdout
  
-12:03:22 **** Incremental Build of configuration Debug for project lpcxpresso55s69_hello_world ****
-make -r -j4 all 
-Building file: ../source/hello_world.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/hello_world.d" -MT"source/hello_world.o" -MT"source/hello_world.d" -o "source/hello_world.o" "../source/hello_world.c"
-Finished building: ../source/hello_world.c
+10:48:09 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
  
-Building target: lpcxpresso55s69_hello_world.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -no-warn-rwx-segments -Xlinker -Map="lpcxpresso55s69_hello_world.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T lpcxpresso55s69_hello_world_Debug.ld -o "lpcxpresso55s69_hello_world.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_memcpy.o ./utilities/fsl_str.o  ./startup/boot_multicore_slave.o ./startup/startup_lpc55s69_cm33_core0.o  ./source/hello_world.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_flexcomm.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_usart.o  ./device/system_LPC55S69_cm33_core0.o  ./component/uart/fsl_adapter_usart.o  ./component/lists/fsl_component_generic_list.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
-Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:       15020 B       630 KB      2.33%
-            SRAM:        8524 B       256 KB      3.25%
-           SRAMX:          0 GB        32 KB      0.00%
-         USB_RAM:          0 GB        16 KB      0.00%
-           SRAM4:          0 GB        16 KB      0.00%
-Finished building target: lpcxpresso55s69_hello_world.axf
- 
-Performing post-build steps
-arm-none-eabi-size "lpcxpresso55s69_hello_world.axf"; # arm-none-eabi-objcopy -v -O binary "lpcxpresso55s69_hello_world.axf" "lpcxpresso55s69_hello_world.bin" ; # checksum -p LPC55S69 -d "lpcxpresso55s69_hello_world.bin";
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
    text	   data	    bss	    dec	    hex	filename
-  15000	     20	   8504	  23524	   5be4	lpcxpresso55s69_hello_world.axf
+  14520	    104	   2056	  16680	   4128	lecture10.elf
+Finished building: default.size.stdout
  
-12:06:31 **** Incremental Build of configuration Debug for project lpcxpresso55s69_hello_world ****
-make -r -j4 all 
-Building file: ../source/hello_world.c
-Building file: ../board/peripherals.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/hello_world.d" -MT"source/hello_world.o" -MT"source/hello_world.d" -o "source/hello_world.o" "../source/hello_world.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/peripherals.d" -MT"board/peripherals.o" -MT"board/peripherals.d" -o "board/peripherals.o" "../board/peripherals.c"
-Finished building: ../board/peripherals.c
+Finished building: lecture10.list
  
-Finished building: ../source/hello_world.c
+10:50:18 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
  
-Building target: lpcxpresso55s69_hello_world.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -no-warn-rwx-segments -Xlinker -Map="lpcxpresso55s69_hello_world.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T lpcxpresso55s69_hello_world_Debug.ld -o "lpcxpresso55s69_hello_world.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_memcpy.o ./utilities/fsl_str.o  ./startup/boot_multicore_slave.o ./startup/startup_lpc55s69_cm33_core0.o  ./source/hello_world.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_flexcomm.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_usart.o  ./device/system_LPC55S69_cm33_core0.o  ./component/uart/fsl_adapter_usart.o  ./component/lists/fsl_component_generic_list.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
-Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:       15032 B       630 KB      2.33%
-            SRAM:        8524 B       256 KB      3.25%
-           SRAMX:          0 GB        32 KB      0.00%
-         USB_RAM:          0 GB        16 KB      0.00%
-           SRAM4:          0 GB        16 KB      0.00%
-Finished building target: lpcxpresso55s69_hello_world.axf
- 
-Performing post-build steps
-arm-none-eabi-size "lpcxpresso55s69_hello_world.axf"; # arm-none-eabi-objcopy -v -O binary "lpcxpresso55s69_hello_world.axf" "lpcxpresso55s69_hello_world.bin" ; # checksum -p LPC55S69 -d "lpcxpresso55s69_hello_world.bin";
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
    text	   data	    bss	    dec	    hex	filename
-  15012	     20	   8504	  23536	   5bf0	lpcxpresso55s69_hello_world.axf
+  15628	    104	   2056	  17788	   457c	lecture10.elf
+Finished building: default.size.stdout
  
-12:08:17 **** Incremental Build of configuration Debug for project lpcxpresso55s69_hello_world ****
-make -r -j4 all 
-Building file: ../source/hello_world.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/hello_world.d" -MT"source/hello_world.o" -MT"source/hello_world.d" -o "source/hello_world.o" "../source/hello_world.c"
-Building file: ../board/pin_mux.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/pin_mux.d" -MT"board/pin_mux.o" -MT"board/pin_mux.d" -o "board/pin_mux.o" "../board/pin_mux.c"
-Finished building: ../board/pin_mux.c
+Finished building: lecture10.list
  
-Finished building: ../source/hello_world.c
+11:18:04 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:144:27: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  144 |                   if (key != 0 == password[pw_i]) {
+      |                       ~~~~^~~~
+../Core/Src/main.c:149:36: warning: comparison between pointer and integer
+  149 |                           if (pw_i == password){
+      |                                    ^~
+../Core/Src/main.c:150:42: warning: too many arguments for format [-Wformat-extra-args]
+  150 |                                   printf("correct password ''\n", key);
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
  
-Building target: lpcxpresso55s69_hello_world.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -no-warn-rwx-segments -Xlinker -Map="lpcxpresso55s69_hello_world.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T lpcxpresso55s69_hello_world_Debug.ld -o "lpcxpresso55s69_hello_world.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_memcpy.o ./utilities/fsl_str.o  ./startup/boot_multicore_slave.o ./startup/startup_lpc55s69_cm33_core0.o  ./source/hello_world.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_flexcomm.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_usart.o  ./device/system_LPC55S69_cm33_core0.o  ./component/uart/fsl_adapter_usart.o  ./component/lists/fsl_component_generic_list.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
-Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:       15028 B       630 KB      2.33%
-            SRAM:        8524 B       256 KB      3.25%
-           SRAMX:          0 GB        32 KB      0.00%
-         USB_RAM:          0 GB        16 KB      0.00%
-           SRAM4:          0 GB        16 KB      0.00%
-Finished building target: lpcxpresso55s69_hello_world.axf
- 
-Performing post-build steps
-arm-none-eabi-size "lpcxpresso55s69_hello_world.axf"; # arm-none-eabi-objcopy -v -O binary "lpcxpresso55s69_hello_world.axf" "lpcxpresso55s69_hello_world.bin" ; # checksum -p LPC55S69 -d "lpcxpresso55s69_hello_world.bin";
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
    text	   data	    bss	    dec	    hex	filename
-  15008	     20	   8504	  23532	   5bec	lpcxpresso55s69_hello_world.axf
+  15824	    104	   2056	  17984	   4640	lecture10.elf
+Finished building: default.size.stdout
  
-12:13:02 **** Incremental Build of configuration Debug for project lpcxpresso55s69_hello_world ****
-make -r -j4 all 
-Building file: ../source/hello_world.c
-Building file: ../board/pin_mux.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/hello_world.d" -MT"source/hello_world.o" -MT"source/hello_world.d" -o "source/hello_world.o" "../source/hello_world.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/pin_mux.d" -MT"board/pin_mux.o" -MT"board/pin_mux.d" -o "board/pin_mux.o" "../board/pin_mux.c"
-Finished building: ../board/pin_mux.c
+Finished building: lecture10.list
  
-Finished building: ../source/hello_world.c
+11:20:04 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:145:27: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  145 |                   if (key != 0 == password[pw_i]) {
+      |                       ~~~~^~~~
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
  
-Building target: lpcxpresso55s69_hello_world.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -no-warn-rwx-segments -Xlinker -Map="lpcxpresso55s69_hello_world.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T lpcxpresso55s69_hello_world_Debug.ld -o "lpcxpresso55s69_hello_world.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_memcpy.o ./utilities/fsl_str.o  ./startup/boot_multicore_slave.o ./startup/startup_lpc55s69_cm33_core0.o  ./source/hello_world.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_flexcomm.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_usart.o  ./device/system_LPC55S69_cm33_core0.o  ./component/uart/fsl_adapter_usart.o  ./component/lists/fsl_component_generic_list.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
-Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:       15032 B       630 KB      2.33%
-            SRAM:        8524 B       256 KB      3.25%
-           SRAMX:          0 GB        32 KB      0.00%
-         USB_RAM:          0 GB        16 KB      0.00%
-           SRAM4:          0 GB        16 KB      0.00%
-Finished building target: lpcxpresso55s69_hello_world.axf
- 
-Performing post-build steps
-arm-none-eabi-size "lpcxpresso55s69_hello_world.axf"; # arm-none-eabi-objcopy -v -O binary "lpcxpresso55s69_hello_world.axf" "lpcxpresso55s69_hello_world.bin" ; # checksum -p LPC55S69 -d "lpcxpresso55s69_hello_world.bin";
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
    text	   data	    bss	    dec	    hex	filename
-  15012	     20	   8504	  23536	   5bf0	lpcxpresso55s69_hello_world.axf
+  16000	    104	   2056	  18160	   46f0	lecture10.elf
+Finished building: default.size.stdout
  
-12:21:49 **** Incremental Build of configuration Debug for project lpcxpresso55s69_hello_world ****
-make -r -j4 all 
-Building file: ../board/peripherals.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DMCUXPRESSO_SDK -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -I"P:\MKS\lpcxpresso55s69_hello_world\utilities" -I"P:\MKS\lpcxpresso55s69_hello_world\drivers" -I"P:\MKS\lpcxpresso55s69_hello_world\device" -I"P:\MKS\lpcxpresso55s69_hello_world\startup" -I"P:\MKS\lpcxpresso55s69_hello_world\component\uart" -I"P:\MKS\lpcxpresso55s69_hello_world\component\lists" -I"P:\MKS\lpcxpresso55s69_hello_world\CMSIS" -I"P:\MKS\lpcxpresso55s69_hello_world\source" -I"P:\MKS\lpcxpresso55s69_hello_world\board" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33 -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/peripherals.d" -MT"board/peripherals.o" -MT"board/peripherals.d" -o "board/peripherals.o" "../board/peripherals.c"
-Finished building: ../board/peripherals.c
+Finished building: lecture10.list
  
-Building target: lpcxpresso55s69_hello_world.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -no-warn-rwx-segments -Xlinker -Map="lpcxpresso55s69_hello_world.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T lpcxpresso55s69_hello_world_Debug.ld -o "lpcxpresso55s69_hello_world.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_memcpy.o ./utilities/fsl_str.o  ./startup/boot_multicore_slave.o ./startup/startup_lpc55s69_cm33_core0.o  ./source/hello_world.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_flexcomm.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_usart.o  ./device/system_LPC55S69_cm33_core0.o  ./component/uart/fsl_adapter_usart.o  ./component/lists/fsl_component_generic_list.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
-Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:       15032 B       630 KB      2.33%
-            SRAM:        8524 B       256 KB      3.25%
-           SRAMX:          0 GB        32 KB      0.00%
-         USB_RAM:          0 GB        16 KB      0.00%
-           SRAM4:          0 GB        16 KB      0.00%
-Finished building target: lpcxpresso55s69_hello_world.axf
+11:21:58 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
  
-Performing post-build steps
-arm-none-eabi-size "lpcxpresso55s69_hello_world.axf"; # arm-none-eabi-objcopy -v -O binary "lpcxpresso55s69_hello_world.axf" "lpcxpresso55s69_hello_world.bin" ; # checksum -p LPC55S69 -d "lpcxpresso55s69_hello_world.bin";
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
    text	   data	    bss	    dec	    hex	filename
-  15012	     20	   8504	  23536	   5bf0	lpcxpresso55s69_hello_world.axf
+  15992	    104	   2056	  18152	   46e8	lecture10.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture10.list
+ 
+11:25:32 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
+ 
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
+   text	   data	    bss	    dec	    hex	filename
+  16020	    104	   2056	  18180	   4704	lecture10.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture10.list
+ 
+11:27:47 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
+ 
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
+   text	   data	    bss	    dec	    hex	filename
+  16084	    104	   2056	  18244	   4744	lecture10.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture10.list
+ 
+11:34:24 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:160:34: warning: too many arguments for format [-Wformat-extra-args]
+  160 |                           printf("wrong password \n", key);
+      |                                  ^~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
+ 
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
+   text	   data	    bss	    dec	    hex	filename
+  16080	    104	   2056	  18240	   4740	lecture10.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture10.list
+ 
+11:34:57 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
+ 
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
+   text	   data	    bss	    dec	    hex	filename
+  16068	    104	   2056	  18228	   4734	lecture10.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture10.list
+ 
+11:40:57 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
+ 
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
+   text	   data	    bss	    dec	    hex	filename
+  16120	    104	   2056	  18280	   4768	lecture10.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture10.list
+ 
+11:42:57 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
+ 
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
+   text	   data	    bss	    dec	    hex	filename
+  16128	    104	   2056	  18288	   4770	lecture10.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture10.list
+ 
+11:43:23 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-size  lecture10.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16128	    104	   2056	  18288	   4770	lecture10.elf
+Finished building: default.size.stdout
+ 
+12:09:00 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:145:20: warning: unused variable 'timeout' [-Wunused-variable]
+  145 |           uint32_t timeout = HAL_GetTick();
+      |                    ^~~~~~~
+../Core/Src/main.c:133:11: warning: unused variable 'time' [-Wunused-variable]
+  133 |   uint8_t time=5;
+      |           ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:177:1: error: expected identifier or '(' before '}' token
+  177 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:09:31 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:177:1: error: expected identifier or '(' before '}' token
+  177 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:10:12 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:177:1: error: expected identifier or '(' before '}' token
+  177 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:10:41 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
+ 
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
+   text	   data	    bss	    dec	    hex	filename
+  16068	    104	   2056	  18228	   4734	lecture10.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture10.list
+ 
+12:11:46 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
+ 
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
+   text	   data	    bss	    dec	    hex	filename
+  16068	    104	   2056	  18228	   4734	lecture10.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture10.list
+ 
+12:12:08 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-size  lecture10.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16068	    104	   2056	  18228	   4734	lecture10.elf
+Finished building: default.size.stdout
+ 
+12:13:56 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
+ 
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
+   text	   data	    bss	    dec	    hex	filename
+  16068	    104	   2056	  18228	   4734	lecture10.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture10.list
+ 
+12:32:38 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:25:18: error: expected ')' before ';' token
+   25 | #define time 5000;
+      |                  ^
+../Core/Src/main.c:149:37: note: in expansion of macro 'time'
+  149 |           if ((timeout-last_time) > time){
+      |                                     ^~~~
+../Core/Src/main.c:149:14: note: to match this '('
+  149 |           if ((timeout-last_time) > time){
+      |              ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:33:19 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
+ 
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
+   text	   data	    bss	    dec	    hex	filename
+  16108	    104	   2056	  18268	   475c	lecture10.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture10.list
+ 
+12:34:45 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:151:41: error: expected ';' before '}' token
+  151 |                   printf("long time \n")
+      |                                         ^
+      |                                         ;
+  152 |           }
+      |           ~                              
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:35:14 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
+ 
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
+   text	   data	    bss	    dec	    hex	filename
+  16132	    104	   2056	  18292	   4774	lecture10.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture10.list
+ 
+12:37:58 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:163:19: error: 'timout' undeclared (first use in this function); did you mean 'timeout'?
+  163 |                   timout=0;
+      |                   ^~~~~~
+      |                   timeout
+../Core/Src/main.c:163:19: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:39:15 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
+ 
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
+   text	   data	    bss	    dec	    hex	filename
+  16108	    104	   2056	  18268	   475c	lecture10.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture10.list
+ 
+12:42:54 **** Incremental Build of configuration Debug for project lecture10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lecture10.elf" @"objects.list"   -mcpu=cortex-m4 -T"P:\MKS\lecture10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lecture10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lecture10.elf
+ 
+arm-none-eabi-size  lecture10.elf 
+arm-none-eabi-objdump -h -S lecture10.elf  > "lecture10.list"
+   text	   data	    bss	    dec	    hex	filename
+  16136	    104	   2056	  18296	   4778	lecture10.elf
+Finished building: default.size.stdout
+ 
+Finished building: lecture10.list
  

@@ -1,0 +1,19 @@
+"Task Aware Debugger for GDB" version 11.10.0 (202404041456)
+Copyright 2016-2023 NXP
+==================================
+10:14:15.267 INFO: [TadModel] DSF session ID 2 has started.
+10:14:29.791 INFO: [TadState] TAD state changed: DEBUG_STARTED -> DEBUG_INIT_0 (SUSPENDED, USER_REQUEST)
+10:34:44.622 INFO: [TadModel] DSF session ID 12 has started.
+10:34:47.49 INFO: [TadState] TAD state changed: DEBUG_STARTED -> DEBUG_INIT_0 (SUSPENDED, USER_REQUEST)
+10:36:08.130 INFO: [TadModel] DSF session ID 14 has started.
+10:36:08.786 INFO: [TadState] TAD state changed: DEBUG_STARTED -> DEBUG_INIT_0 (SUSPENDED, USER_REQUEST)
+11:24:48.425 INFO: [TadModel] DSF session ID 22 has started.
+11:25:17.203 INFO: [TadState] TAD state changed: DEBUG_STARTED -> DEBUG_INIT_0 (SUSPENDED, USER_REQUEST)
+11:44:02.603 INFO: [TadModel] DSF session ID 23 has started.
+11:44:11.180 INFO: [TadModel] DSF session ID 24 has started.
+11:44:25.623 INFO: [TadState] TAD state changed: DEBUG_STARTED -> DEBUG_INIT_0 (SUSPENDED, USER_REQUEST)
+11:44:25.731 INFO: [TadState] TAD state changed: DEBUG_INIT_0 -> DEBUG_INIT_1 (SUSPENDED, USER_REQUEST)
+11:44:26.858 INFO: [TadState] TAD state changed: DEBUG_INIT_1 -> DEBUG_SUSPENDED (RESUMED, USER_REQUEST)
+11:44:26.921 INFO: [TadState] TAD state changed: DEBUG_SUSPENDED -> DEBUG_SUSPENDED (SUSPENDED, BREAKPOINT)
+11:44:32.354 INFO: [TadState] TAD state changed: DEBUG_SUSPENDED -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+11:45:08.138 INFO: [TadModel] DSF session ID 23 has ended.
