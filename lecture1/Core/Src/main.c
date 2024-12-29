@@ -97,26 +97,41 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   uint32_t i =0;
   uint32_t array[32] = {1,0,1,0,1,0,0,1,1,1,0,1,1,1,0,1,1,1,0,0,1,0,1,0,1,0,0,0,0,0,0,0};
-  uint32_t x = 0b10101001110111011100101010000000;
+  uint32_t morse = 0b10101001110111011100101010000000;
 
   while (1)
   {
-	  for(int i=31; i>=0;i--){
-		  uint32_t z = (x>>i)&1;
-
-	  if (z){
+	  if ((morse & (1<<i)) > 0){
 		  LL_GPIO_SetOutputPin(LD2_GPIO_Port, LD2_Pin);
-	  }else {
+	  } else {
 		  LL_GPIO_ResetOutputPin(LD2_GPIO_Port, LD2_Pin);
 	  }
 	  LL_mDelay(200);
-	  }
 
-	  if(i<31){
+	  if (i<31){
 		  i++;
-	  }else{
+	  } else {
 		  i=0;
 	  }
+
+	  /* blinking via array
+	  if (array[i]==1){
+		  LL_GPIO_SetOutputPin(LD2_GPIO_Port, LD2_Pin);
+	  } else {
+		  LL_GPIO_ResetOutputPin(LD2_GPIO_Port, LD2_Pin);
+	  }
+	  LL_mDelay(200);
+	  if (i<31){
+		  i++;
+	  } else {
+		  i=0;
+	  }
+	  */
+
+	  /* Blinking LED
+	  LL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+	  LL_mDelay(200);
+	  */
 
     /* USER CODE END WHILE */
 
