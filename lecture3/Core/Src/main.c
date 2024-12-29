@@ -106,12 +106,13 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	//testovani dispelje pro kazdou hodnotu (priklad zobrazeni 111, 222)
 	 //for(uint8_t i=0;i<10;i++){
 		 //sct_value(111*i);
 		 //HAL_Delay(1000);
 
 	 //}
-	  sct_value(__HAL_TIM_GET_COUNTER(&htim1));
+	  sct_value(__HAL_TIM_GET_COUNTER(&htim1)); //zobrazeni hodnoty rotacniho enkoderu 
 	  HAL_Delay(50);
   }
   /* USER CODE END 3 */
