@@ -37,6 +37,7 @@
 #define BOTTON2_TIME 	300
 #define LED_TIME_SHORT1 1000
 #define LED_LONG_TIME   1000
+#define DEBOUNCE_TIME 	5
 
 /* USER CODE END PD */
 
@@ -72,7 +73,7 @@ static void blink() {
 		last_blink_tick = tick;
 
 		//kazdych 300 ms
-		LL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+		LL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin); //prepne stav mezi high a low
 
 	}
 
@@ -80,26 +81,26 @@ static void blink() {
 
 static void botton1() {
 
-	static uint32_t last_botton_tick;
+	static uint32_t last_botton_tick; 
 
-	//vzorkovani tlacitka
+	//vzorkovani tlacitka kazdych botton1_time
 	if(tick > last_botton_tick + BOTTON1_TIME){
-		last_botton_tick = tick;
-
+		last_botton_tick = tick; // Aktualizace casu posledniho vzorkovani
 		//kazdych 40 ms
 		static uint32_t old_s2;
+		// Nacteni aktualniho stavu tlacitka S2
 		uint32_t new_s2 = LL_GPIO_IsInputPinSet(S2_GPIO_Port, S2_Pin);
 
 		if (old_s2 && !new_s2) { // falling edge
-			off_time = tick + LED_TIME_SHORT;
+			off_time = tick + LED_TIME_SHORT; //cas sviceni led
 			LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
 		}
-		old_s2 = new_s2;
+		old_s2 = new_s2; //ulozeni aktualniho stavu tlacitka
 
 
 	}
 
-	//zhasinani led
+	//zhasinani led po case off_time
 	if (tick > off_time) {
 			LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
 		}
@@ -134,20 +135,27 @@ static void botton2() {
 }
 
 static void Reg(){
-	static uint16_t debounce = 0xFFFF;
+	static uint32_t last_debounce_tick;
+	static uint32_t off_time;
 
-	debounce <<=1;
-	if (LL_GPIO_IsInputPinSet(S2_GPIO_Port, S2_Pin)){
-		debounce = debounce+1;
-	}
+	if(tick > last_debounce_tick + DEBOUNCE_TIME){
+		last_debounce_tick = tick;
+		static uint16_t debounce = 0xFFFF;
 
-	if(debounce == 0x8000){
-		off_time =tick+LED_LONG_TIME;
-		LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
-	}
-	if (tick > off_time) {
+		debounce <<=1; //bitovy posun o jeden bit doleva
+		if (LL_GPIO_IsInputPinSet(S2_GPIO_Port, S2_Pin)){
+			debounce |= 0x0001; //nastaveni bitu 0 na 1
+		}
+		
+		// Kontrola, zda je splnena podminka pro sestupnou hranu (prvni stisk)
+		if(debounce == 0x8000){
+			off_time =tick+LED_LONG_TIME;
+			LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
+		}
+		if (tick > off_time) {
 			LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
 		}
+	}
 }
 
 /* USER CODE END 0 */
