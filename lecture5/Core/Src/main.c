@@ -143,12 +143,17 @@ static void uart_process_command(char* cmd){
 
 static void uart_byte_available(uint8_t c)
 {
-	static uint16_t cnt;
-	static char data[CMD_BUFFER_LEN];
+	static uint16_t cnt; // Pocitadlo prijatych znaku
+	static char data[CMD_BUFFER_LEN]; // Pole pro ukladani prijateho prikazu
+	
+	// Pokud je pocet prijatych znaku mensi nez maximalni delka bufferu
+	// a prijaty znak je tisknutelny (ASCII 32-126), uloz ho do bufferu
 	if (cnt < CMD_BUFFER_LEN && c >= 32 && c <= 126) data[cnt++] = c;
+
+	// Pokud je prijat znak konce radku ('\n' nebo '\r') a buffer obsahuje znaky
 	if ((c == '\n' || c == '\r') && cnt > 0) {
-		data[cnt] = '\0';
-		uart_process_command(data);
+		data[cnt] = '\0'; // Pridani koncove nuly pro ukonceni retezce
+		uart_process_command(data); // Zpracovani prijateho prikazu
 		cnt = 0;
 	}
 }
@@ -206,11 +211,13 @@ int main(void)
 	  HAL_UART_Transmit(&huart2, &c, sizeof(c), HAL_MAX_DELAY);
 		 */
 		HAL_UART_Receive_DMA(&huart2, uart_rx_buf, RX_BUFFER_LEN);
+
+		// Smycka pro zpracovani prijatych bajtu
 		while (uart_rx_read_ptr != uart_rx_write_ptr) {
-			uint8_t b = uart_rx_buf[uart_rx_read_ptr];
-			// increase read pointer
+			uint8_t b = uart_rx_buf[uart_rx_read_ptr]; // Nacteni jednoho bajtu z prijimaciho bufferu
+			// Zvyseni ukazatele pro cteni
 			if (++uart_rx_read_ptr >= RX_BUFFER_LEN) uart_rx_read_ptr = 0;
-			// process every received byte with the RX state machine
+			// Zpracovani kazdeho prijateho bajtu pomoci stavoveho stroje
 			uart_byte_available(b);
 		}
 
