@@ -82,6 +82,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc){
 		raw_volt = HAL_ADC_GetValue(hadc);
 	}
 
+	// Kontrola, zda byl dosazen konec konverze ADC (EOS)
 	if (__HAL_ADC_GET_FLAG(hadc, ADC_FLAG_EOS)) channel = 0;
 	else channel++;
 
@@ -150,8 +151,8 @@ int main(void)
 
 		static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
 		if (HAL_GPIO_ReadPin(S1_GPIO_Port, S1_Pin) != 1 ){
-			state = SHOW_VOLT;
-			time=HAL_GetTick();
+			state = SHOW_VOLT; // Prepnuti do stavu zobrazovani napeti
+			time=HAL_GetTick(); // Ulozeni aktualniho casu
 		} else 	if (HAL_GPIO_ReadPin(S2_GPIO_Port, S2_Pin) != 1 ){
 			state = SHOW_TEMP;
 			time=HAL_GetTick();
@@ -173,6 +174,7 @@ int main(void)
 			sct_value(temperature, raw_temp*9/4095);
 		}
 
+		// Automaticke vraceni do stavu SHOW_POT po 1 sekunde
 		if (HAL_GetTick() >= time+1000) state = SHOW_POT;
 		HAL_Delay(50);
 
