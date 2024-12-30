@@ -133,17 +133,23 @@ int main(void)
 
 		  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 1);
 		  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 0);
+		
+		// Zahajeni prevodu teploty, pokud prevod nebyl zahajen
 		  if(convert=0){
 			  OWConvertAll();
 			  convert=1;
 		  }
 		  OWConvertAll();
+			
+		// Kontrola casoveho zpozdeni pro prevod teploty
 		  if ( HAL_GetTick()>last_button_tick+CONVERT_T_DELAY){
-			  convert =0;
-			  last_button_tick = HAL_GetTick();
+			  convert =0; // Resetovani priznaku prevodu
+			  last_button_tick = HAL_GetTick(); // Aktualizace casu posledniho prevodu
+			
+			// Cteni a zobrazeni teploty
 			  int16_t value;
 			  if(OWReadTemperature(&value)){
-			 		 sct_value(value/10, 0);
+			 		 sct_value(value/10, 0); // Zobrazeni hodnoty na displeji
 			 }
 		  }
 
@@ -157,8 +163,9 @@ int main(void)
 		  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 0);
 		  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 1);
 		  uint32_t result;
+		// Mereni hodnoty z NTC termistoru pomoci ADC
 		  result=HAL_ADC_GetValue(&hadc);
-		  sct_value(data[result],0);
+		  sct_value(data[result],0); // Zobrazeni hodnoty na displeji
 		  HAL_Delay(100);
 	  }
 
